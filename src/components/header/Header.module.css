@@ -3,6 +3,11 @@
   align-items: center;
 }
 
+.imageContainer {
+  background-color: var(--clr-blue);
+  
+}
+
 .navbar__list {
   display: flex;
   gap: var(--space-400);
