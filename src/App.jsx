@@ -1,9 +1,12 @@
 import { Outlet } from 'react-router'
 import './App.css'
 
+// TODO: Style header and nav bar
+ 
 function App() {
   return (
     <div className='page'>
+     
       <header className='header'>
         {/* <img className='logo' src="" alt="" /> */}
         <h1 className='title'>Shopping Cart Project</h1>
