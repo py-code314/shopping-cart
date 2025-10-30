@@ -1,16 +1,23 @@
-// import { useState } from 'react'
-
+import { Outlet } from 'react-router'
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        
-      </div>
-      </>
+    <div>
+      <header>
+        {/* <img className='logo' src="" alt="" /> */}
+        <h1>Shopping Cart Project</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Cart</li>
+          </ul>
+        </nav>
+      </header>
+      <Outlet />
+      <footer>I am a footer</footer>
+    </div>
   )
 }
 
