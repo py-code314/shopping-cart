@@ -1,6 +1,8 @@
+import styles from './Cart.module.css'
+
 const Cart = () => {
   return ( 
-    <div>
+    <div className={styles.cart}>
       <h2>Cart</h2>
     </div>
    );

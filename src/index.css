@@ -137,3 +137,11 @@ ul {
 /* ===================
    END OF RESET 
    =================== */
+
+/* body {
+  height: 100svh;
+} */
+
+#root {
+  min-height: 100svh;
+}

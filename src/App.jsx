@@ -3,20 +3,20 @@ import './App.css'
 
 function App() {
   return (
-    <div>
-      <header>
+    <div className='page'>
+      <header className='header'>
         {/* <img className='logo' src="" alt="" /> */}
-        <h1>Shopping Cart Project</h1>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Cart</li>
+        <h1 className='title'>Shopping Cart Project</h1>
+        <nav className='navbar'>
+          <ul className='navbar__list'>
+            <li className='navbar__item'>Home</li>
+            <li className='navbar__item'>Shop</li>
+            <li className='navbar__item'>Cart</li>
           </ul>
         </nav>
       </header>
       <Outlet />
-      <footer>I am a footer</footer>
+      <footer className='footer'>I am a footer</footer>
     </div>
   )
 }
