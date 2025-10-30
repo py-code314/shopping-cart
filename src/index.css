@@ -76,6 +76,7 @@
   --clr-red: hsl(0, 100%, 50%);
   --clr-green: hsl(120, 100%, 25%);
   --clr-blue: hsl(240, 100%, 50%);
+  --clr-dodger-blue: #1E90FF;
   
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */

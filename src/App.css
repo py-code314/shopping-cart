@@ -11,5 +11,14 @@
 
 .navbar__list {
   display: flex;
+  gap: var(--space-400);
 }
 
+.navbar__item a {
+  text-decoration: none;
+}
+
+.navbar__item a.active {
+  background-color: var(--clr-dodger-blue);
+  color: var(--clr-white);
+}
