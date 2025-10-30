@@ -8,12 +8,16 @@ import Shop from './components/shop/Shop.jsx'
 import Cart from './components/cart/Cart.jsx'
 
 // TODO: Move router into a separate file
-// TODO: Show Home page on page load, use index
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
+      {
+        index: true,
+        element: <Home/>
+      },
       {
         path: 'home',
         element: <Home/>
