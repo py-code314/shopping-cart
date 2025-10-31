@@ -1,11 +1,19 @@
 import styles from './Header.module.css'
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router'
 import shoppingBagIcon from '../../assets/images/shopping-bag-icon.svg'
 
-const Header = () => {
+const Header = ({ onClick, onHomeClick }) => {
   return (
     <header className={styles.header}>
-      <div className={styles.imageContainer}><img className='logo' src={shoppingBagIcon} alt="" width={30} height={30} /></div>
+      <div className={styles.imageContainer}>
+        <img
+          className="logo"
+          src={shoppingBagIcon}
+          alt=""
+          width={30}
+          height={30}
+        />
+      </div>
       <h1 className={styles.title}>Anchor</h1>
       <nav className={styles.navbar}>
         <ul className={styles.navbar__list}>
@@ -14,7 +22,8 @@ const Header = () => {
               to={`home`}
               className={({ isActive }) =>
                 `${styles.navbar__link} ${isActive ? styles.active : ''}`
-              }>
+              }
+              onClick={onHomeClick}>
               Home
             </NavLink>
           </li>
@@ -23,7 +32,8 @@ const Header = () => {
               to={`shop`}
               className={({ isActive }) =>
                 `${styles.navbar__link} ${isActive ? styles.active : ''}`
-              }>
+              }
+              onClick={onClick}>
               Shop
             </NavLink>
           </li>
@@ -32,7 +42,8 @@ const Header = () => {
               to={`cart`}
               className={({ isActive }) =>
                 `${styles.navbar__link} ${isActive ? styles.active : ''}`
-              }>
+              }
+              onClick={onClick}>
               Cart
             </NavLink>
           </li>
@@ -41,5 +52,5 @@ const Header = () => {
     </header>
   )
 }
- 
-export default Header;
+
+export default Header
