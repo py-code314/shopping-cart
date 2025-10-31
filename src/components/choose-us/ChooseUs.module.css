@@ -1,0 +1,40 @@
+.chooseUs {
+  padding: 60px 40px;
+  display: flex;
+  gap: 16px;
+}
+
+.headingWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
+  font-family: var(--ff-gilroy-bold);
+  font-size: var(--fs-800);
+}
+
+.luxury,
+.prices,
+.choices {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+}
+
+.subheading {
+  font-family: var(--ff-gilroy-bold);
+  font-size: var(--fs-600);
+}
+
+.inactiveLink {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-block-start: auto;
+  text-decoration: none;
+  color: var(--clr-fulvous);
+  font-family: var(--ff-gilroy-medium);
+}

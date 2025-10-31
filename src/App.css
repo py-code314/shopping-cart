@@ -3,6 +3,7 @@
   margin: auto;
 } */
 
+/* ? How to apply background image without stretching it */
 .backgroundWrapper {
   background: var(--clr-arsenic) url('./assets/images/living-room.jpeg');
   background-size: 100% 100%;

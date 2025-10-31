@@ -54,10 +54,17 @@ ul {
   font-family: 'Gilroy Bold';
   src: url(./assets/fonts/gilroy-bold/Gilroy-Bold.ttf);
 }
+
+@font-face {
+  font-family: 'Gilroy Medium';
+  src: url(./assets/fonts/gilroy-bold/Gilroy-Medium.ttf);
+}
+
 @font-face {
   font-family: 'Gilroy Regular';
   src: url(./assets/fonts/gilroy-bold/Gilroy-Regular.ttf);
 }
+
 
 /* ===================
    CSS VARIABLES
@@ -140,7 +147,9 @@ ul {
 
   /* Font families */
   --ff-gilroy-bold: 'Gilroy Bold';
+  --ff-gilroy-medium: 'Gilroy Medium';
   --ff-gilroy-regular: 'Gilroy Regular';
+
   
   /* Colors */
   --clr-black: hsl(0, 0%, 0%);
@@ -150,7 +159,8 @@ ul {
   --clr-blue: hsl(240, 100%, 50%);
   --clr-dodger-blue: #1E90FF;
   --clr-arsenic: #374244;
-  --clr-chestnut: #974E27;
+  /* --clr-chestnut: #974E27; */
+  --clr-fulvous: #E58411;
   
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */
