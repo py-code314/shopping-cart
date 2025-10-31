@@ -1,9 +1,10 @@
+import Hero from '../hero/Hero';
 import styles from './Home.module.css'
 
 const Home = () => {
   return ( 
     <div className={styles.home}>
-      <h2>Home</h2>
+      {/* <Hero/> */}
     </div>
    );
 }
