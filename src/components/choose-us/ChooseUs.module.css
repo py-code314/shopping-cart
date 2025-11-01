@@ -1,7 +1,7 @@
 .chooseUs {
-  padding: 60px 40px;
+  padding: var(--space-1600) var(--space-1100);
   display: flex;
-  gap: 16px;
+  gap: var(--space-400);
 }
 
 .headingWrapper {
@@ -31,7 +31,7 @@
 
 .inactiveLink {
   display: flex;
-  gap: 6px;
+  gap: var(--space-60);
   align-items: center;
   margin-block-start: auto;
   text-decoration: none;
