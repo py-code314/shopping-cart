@@ -69,6 +69,10 @@ ul {
   font-family: 'Inter';
   src: url(./assets/fonts/inter/Inter-VariableFont_opsz\,wght.ttf);
 }
+@font-face {
+  font-family: 'DM Sans';
+  src: url(./assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
+}
 
 
 /* ===================
@@ -140,6 +144,7 @@ ul {
   /*--height-card: 27.65rem;  470px */
   --height-product: 26.875rem; /* 430px */
   --width-content: 75rem; /* 1200px */
+  --width-footer: 62.5rem; /* 1000px */
   
   
   /* Font weights */
@@ -159,6 +164,7 @@ ul {
   --ff-gilroy-medium: 'Gilroy Medium';
   --ff-gilroy-regular: 'Gilroy Regular';
   --ff-inter: Inter;
+  --ff-dm-sans: 'DM Sans';
 
   
   /* Colors */
@@ -169,10 +175,12 @@ ul {
   --clr-blue: hsl(240, 100%, 50%);
   --clr-dodger-blue: #1E90FF;
   --clr-arsenic: #374244;
-  /* --clr-chestnut: #974E27; */
   --clr-fulvous: #E58411;
   --clr-lotion: #FAFAFA;
   --clr-davys-grey: #595959;
+  --clr-cultured: #F7F7F7;
+  --clr-eerie-black: #1E1E1E;
+  --clr-dark-gunmetal: #1E2833;
   
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */

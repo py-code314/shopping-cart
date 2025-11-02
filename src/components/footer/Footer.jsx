@@ -8,69 +8,118 @@ import { Link } from 'react-router'
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.about}>
-        <h2 className={styles.subtitle}>Anchor</h2>
-        <p className={styles.description}>
-          The full-scale department store experience, now just a click away.
-          Shop top brands in fashion, home, and beauty. We're committed to
-          offering the quality, selection, and service you expect from a trusted
-          retail name.
-        </p>
-      </div>
-      <div className={styles.customerService}>
-        <h3 className={styles.subheading}>Customer Service</h3>
-        <Link className={styles.faq}>FAQ and Help</Link>
-        <Link className={styles.order}>Order Lookup</Link>
-        <Link className={styles.returns}>Returns</Link>
-        <Link className={styles.shipping}>Shipping & Delivery</Link>
-      </div>
-      <div className={styles.services}>
-        <h3 className={styles.subheading}>Stores & Services</h3>
-        <Link className={styles.pickup}>Curbside & In Store Pickup</Link>
-        <Link className={styles.locations}>Locations & Hours</Link>
-        <Link className={styles.events}>Store Events</Link>
-        <Link className={styles.gifts}>Gift Registry</Link>
-      </div>
-      <div className={styles.follow}>
-        <h3 className={styles.subheading}>Follow Us</h3>
-        <a
-          className={styles.socialWrapper}
-          href="https://www.facebook.com"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src={facebookIcon} alt="" />
-          <p>Facebook</p>
-        </a>
-
-        <a
-          className={styles.socialWrapper}
-          href="https://x.com"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src={mastodonIcon} alt="" />
-          <p>X</p>
-        </a>
-        <a
-          className={styles.socialWrapper}
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src={instagramIcon} alt="" />
-          <p>Instagram</p>
-        </a>
-        <a
-          className={styles.socialWrapper}
-          href="https://pinterest.com"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src={pinterestIcon} alt="" />
-          <p>Pinterest</p>
-        </a>
-      </div>
-      <div>
-        <p>Copyright &copy; 2025</p>
-        <Link>Terms & Conditions</Link>
-        <Link>Privacy Policy</Link>
+      <div className={styles.contentWrapper}>
+        <div className={styles.footerPrimary}>
+          <div className={styles.about}>
+            <h2 className={styles.subtitle}>Anchor</h2>
+            <p className={styles.description}>
+              The full-scale department store experience, now just a click away.
+              Shop top brands in fashion, home, and beauty.
+            </p>
+          </div>
+          <div className={styles.footerGroup}>
+            <div className={styles.groupWrapper}>
+              <h3 className={styles.subheading}>Customer Service</h3>
+              <ul className={styles.footerListPrimary}>
+                <li>
+                  <Link className={styles.footerLink}>FAQ and Help</Link>
+                </li>
+                <li>
+                  <Link className={styles.footerLink}>Order Lookup</Link>
+                </li>
+                <li>
+                  <Link className={styles.footerLink}>Returns</Link>
+                </li>
+                <li>
+                  <Link className={styles.footerLink}>Shipping & Delivery</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.footerGroup}>
+            <div className={styles.groupWrapper}>
+              <h3 className={styles.subheading}>Stores & Services</h3>
+              <ul className={styles.footerListPrimary}>
+                <li className={styles.footerListItem}>
+                  <Link className={styles.footerLink}>
+                    Curbside & In Store Pickup
+                  </Link>
+                </li>
+                <li className={styles.footerListItem}>
+                  <Link className={styles.footerLink}>Locations & Hours</Link>
+                </li>
+                <li className={styles.footerListItem}>
+                  <Link className={styles.footerLink}>Store Events</Link>
+                </li>
+                <li className={styles.footerListItem}>
+                  <Link className={styles.footerLink}>Gift Registry</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.footerGroup}>
+            <div className={styles.groupWrapper}>
+              <h3 className={styles.subheading}>Follow Us</h3>
+              <ul className={styles.footerListPrimary}>
+                <li className={styles.footerListItem}>
+                  <a
+                    className={styles.footerLink}
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img src={facebookIcon} alt="" />
+                    <p>Facebook</p>
+                  </a>
+                </li>
+                <li className={styles.footerListItem}>
+                  <a
+                    className={styles.footerLink}
+                    href="https://mastodon.social/explore"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img src={mastodonIcon} alt="" />
+                    <p>Mastodon</p>
+                  </a>
+                </li>
+                <li className={styles.footerListItem}>
+                  <a
+                    className={styles.footerLink}
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img src={instagramIcon} alt="" />
+                    <p>Instagram</p>
+                  </a>
+                </li>
+                <li className={styles.footerListItem}>
+                  <a
+                    className={styles.footerLink}
+                    href="https://pinterest.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img src={pinterestIcon} alt="" />
+                    <p>Pinterest</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={styles.footerSecondary}>
+          <ul className={styles.footerListSecondary}>
+            <li className={styles.footerListItem}>
+              <p className={styles.copyright}>Copyright &copy; 2025</p>
+            </li>
+            <div className={styles.footerSecondaryLinks}>
+              <li className={styles.footerListItem}>
+                <Link className={styles.footerLink}>Terms & Conditions</Link>
+              </li>
+              <li className={styles.footerListItem}>
+                <Link className={styles.footerLink}>Privacy Policy</Link>
+              </li>
+            </div>
+          </ul>
+        </div>
       </div>
     </footer>
   )
