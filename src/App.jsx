@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Hero from './components/hero/Hero'
 import Home from './components/home/Home'
 import { useState } from 'react'
+import Footer from './components/footer/Footer'
 
 // TODO: Style header and nav bar
 
@@ -31,7 +32,7 @@ function App() {
       )}
 
       <Outlet />
-      <footer className="footer">I am a footer</footer>
+      <Footer/>
     </div>
   )
 }
