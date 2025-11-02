@@ -10,8 +10,8 @@ const Hero = () => {
         </h2>
         <p className={styles.description}>Everything you want, all in one seamless shopping experience.</p>
         <form className={styles.form} action="">
-          <input className={styles.search} type="search" />
-          <button className={styles.btn} type='button'>
+          <input className={styles.search} type="search" name='search' />
+          <button className={styles.btnSearch} type='button'>
             <img src={searchIcon} alt="" width={30} height={30}  />
           </button>
         </form>

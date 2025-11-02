@@ -1,7 +1,9 @@
 .chooseUs {
   padding: var(--space-1600) var(--space-1100);
   display: flex;
-  gap: var(--space-400);
+  gap: var(--space-800);
+  max-width: var(--width-content);
+  margin: auto;
 }
 
 .headingWrapper {
@@ -29,7 +31,7 @@
   font-size: var(--fs-600);
 }
 
-.inactiveLink {
+.linkMore {
   display: flex;
   gap: var(--space-60);
   align-items: center;

@@ -1,0 +1,95 @@
+.bestProducts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1200);
+  padding: var(--space-1100);
+  max-width: var(--width-content);
+  margin: auto;
+}
+
+.subtitle {
+  text-align: center;
+  composes: subtitle from '../choose-us/ChooseUs.module.css';
+}
+
+.productList {
+  display: flex;
+  gap: var(--space-600);
+}
+
+.product {
+  flex: 1;
+  height: var(--height-product);
+  font-family: var(--ff-inter);
+  /* display: flex-column to prevent card taking up too much height */
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  height: 90%;
+  text-decoration: none;
+}
+
+.imageWrapper {
+  height: 60%;
+  background-color: var(--clr-lotion);
+  padding: var(--space-200) 0;
+  border-radius: var(--radius-2);
+}
+
+.contentWrapper {
+  height: 40%;
+  padding: var(--space-100);
+  color: var(--clr-black);
+}
+
+.image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.category {
+  color: var(--clr-davys-grey);
+  text-transform: capitalize;
+}
+
+.title,
+.price {
+  font-weight: var(--fw-semibold);
+}
+
+.rate {
+  color: var(--clr-fulvous);
+}
+
+.dollar {
+  vertical-align: super;
+  font-size: var(--fs-200);
+}
+
+.buyWrapper {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--space-100);
+}
+
+.btnAdd {
+  composes: btn from '../hero/Hero.module.css';
+  background-color: var(--clr-black);
+  width: var(--space-850);
+  height: var(--space-850);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkMore {
+  composes: linkMore from '../choose-us/ChooseUs.module.css';
+  margin-block-start: 0;
+  justify-content: center;
+  padding: var(--space-400);
+}

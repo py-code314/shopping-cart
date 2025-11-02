@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './BestProducts.module.css'
 import { Link } from 'react-router'
 import plusIcon from '../../assets/images/plus-icon.svg'
+import rightArrow from '../../assets/images/arrow-right-icon.svg'
 
 const BestProducts = () => {
   const [data, setData] = useState(null)
@@ -32,7 +33,6 @@ const BestProducts = () => {
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>{error}</div>
 
-
   const bestProducts = data.filter(
     (product) =>
       product.id === 2 ||
@@ -42,28 +42,54 @@ const BestProducts = () => {
   )
   // console.log(bestProducts)
   // console.log(data)
+  // TODO: Implement star rating
 
   return (
     <section className={styles.bestProducts}>
-      <ul>
+      <h2 className={styles.subtitle}>Best Selling Products</h2>
+      <ul className={styles.productList}>
         {bestProducts &&
           bestProducts.map((product) => (
-            <li key={product.id}>
-              <Link>
-                <img src={product.image} alt="" />
-                <p>{product.category}</p>
-                <p>{product.title}</p>
-                <p>{product.rating.rate}</p>
-                <p>{product.price}</p>
-                <button>
-                  <img src={plusIcon} alt="" width={20} height={20} />
-                </button>
+            <li className={styles.product} key={product.id}>
+              <Link className={styles.card}>
+                <div className={styles.imageWrapper}>
+                  <img className={styles.image} src={product.image} alt="" />
+                </div>
+                <div className={styles.contentWrapper}>
+                  <p className={styles.category}>{product.category}</p>
+                  <p className={styles.title}>{product.title}</p>
+                  <p className={styles.rating}>
+                    Rating:{' '}
+                    <span className={styles.rate}>{product.rating.rate}</span>
+                  </p>
+                </div>
               </Link>
+              <div className={styles.buyWrapper}>
+                <p className={styles.price}>
+                  <span className={styles.dollar}>$</span>
+                  {product.price.toFixed(2)}
+                </p>
+                <button className={styles.btnAdd}>
+                  <img
+                    className={styles.btnIcon}
+                    src={plusIcon}
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                </button>
+              </div>
             </li>
           ))}
       </ul>
+      <Link className={styles.linkMore} to={''}>
+        View All
+        <img src={rightArrow} alt="" width={30} height={20} />
+      </Link>
     </section>
   )
 }
+
+//TODO: Place buyWrapper out of Link
 
 export default BestProducts

@@ -52,17 +52,22 @@ ul {
 
 @font-face {
   font-family: 'Gilroy Bold';
-  src: url(./assets/fonts/gilroy-bold/Gilroy-Bold.ttf);
+  src: url(./assets/fonts/gilroy/Gilroy-Bold.ttf);
 }
 
 @font-face {
   font-family: 'Gilroy Medium';
-  src: url(./assets/fonts/gilroy-bold/Gilroy-Medium.ttf);
+  src: url(./assets/fonts/gilroy/Gilroy-Medium.ttf);
 }
 
 @font-face {
   font-family: 'Gilroy Regular';
-  src: url(./assets/fonts/gilroy-bold/Gilroy-Regular.ttf);
+  src: url(./assets/fonts/gilroy/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(./assets/fonts/inter/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 
@@ -132,6 +137,9 @@ ul {
   --height-hero: 43.75rem; /* 700px */
   --width-hero-content: 47.5rem; /* 760px */
   --width-search-input: 15.625rem; /* 250px */
+  /*--height-card: 27.65rem;  470px */
+  --height-product: 26.875rem; /* 430px */
+  --width-content: 75rem; /* 1200px */
   
   
   /* Font weights */
@@ -150,6 +158,7 @@ ul {
   --ff-gilroy-bold: 'Gilroy Bold';
   --ff-gilroy-medium: 'Gilroy Medium';
   --ff-gilroy-regular: 'Gilroy Regular';
+  --ff-inter: Inter;
 
   
   /* Colors */
@@ -162,6 +171,8 @@ ul {
   --clr-arsenic: #374244;
   /* --clr-chestnut: #974E27; */
   --clr-fulvous: #E58411;
+  --clr-lotion: #FAFAFA;
+  --clr-davys-grey: #595959;
   
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */

@@ -13,7 +13,7 @@ const ChooseUs = () => {
           Discover a curated selection of high-end goods, chosen for their
           uncompromising quality and impeccable craftsmanship.
         </p>
-        <a className={styles.inactiveLink} href="#">
+        <a className={styles.linkMore} href="#">
           More Info
           <img src={rightArrow} alt="" width={30} height={20} />
         </a>
@@ -24,7 +24,7 @@ const ChooseUs = () => {
           Premium quality shouldn't break the bank. Enjoy the best items at
           prices designed for your budget.
         </p>
-        <a className={styles.inactiveLink} href="#">
+        <a className={styles.linkMore} href="#">
           More Info
           <img src={rightArrow} alt="" width={30} height={20} />
         </a>
@@ -35,7 +35,7 @@ const ChooseUs = () => {
           Explore an expansive catalog featuring thousands of items and hundreds
           of brands. Your perfect find is just a click away.
         </p>
-        <a className={styles.inactiveLink} href="#">
+        <a className={styles.linkMore} href="#">
           More Info
           <img src={rightArrow} alt="" width={30} height={20} />
         </a>
