@@ -12,6 +12,8 @@ const BestProducts = () => {
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>{error}</div>
 
+  //TODO: Style error message
+
   const bestProducts = data.filter(
     (product) =>
       product.id === 2 ||
