@@ -1,0 +1,80 @@
+.card {
+  height: 520px;
+  font-family: var(--ff-inter);
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  height: 50%;
+  composes: imageWrapper from '../best-products/BestProducts.module.css';
+  padding: var(--space-200);
+}
+
+.image {
+  composes: image from '../best-products/BestProducts.module.css';
+}
+
+.contentWrapper {
+  height: 30%;
+  composes: contentWrapper from '../best-products/BestProducts.module.css';
+}
+
+.category {
+  composes: category from '../best-products/BestProducts.module.css';
+}
+
+.title,
+.price {
+  font-weight: var(--fw-semibold);
+}
+
+.rate {
+  color: var(--clr-fulvous);
+}
+
+.dollar {
+  composes: dollar from '../best-products/BestProducts.module.css';
+}
+
+.buyWrapper {
+  height: 14%;
+  margin-block-start: auto;
+  padding: 0 var(--space-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-60);
+}
+
+.inputWrapper {
+  display: flex;
+}
+
+.btnRemove {
+  composes: btnAdd from '../best-products/BestProducts.module.css';
+  border-radius: var(--radius-1) 0 0 var(--radius-1);
+}
+.btnAdd {
+  composes: btnAdd from '../best-products/BestProducts.module.css';
+  border-radius: 0 var(--radius-1) var(--radius-1) 0;
+}
+
+.quantity {
+  text-align: center;
+  flex: 1;
+  border: 1px solid var(--clr-black);
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.btnSubmit {
+  composes: btn from '../hero/Hero.module.css';
+  border-radius: var(--radius-1);
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: var(--space-50) 0;
+  font-weight: var(--fw-semibold);
+}
