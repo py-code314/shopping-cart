@@ -1,5 +1,6 @@
 import styles from './ChooseUs.module.css'
 import rightArrow from '../../assets/images/arrow-right-icon.svg'
+import { Link } from 'react-router'
 
 const ChooseUs = () => {
   return (
@@ -13,10 +14,10 @@ const ChooseUs = () => {
           Discover a curated selection of high-end goods, chosen for their
           uncompromising quality and impeccable craftsmanship.
         </p>
-        <a className={styles.linkMore} href="#">
+        <Link className={`${styles.linkMore} ${styles.inactive}`}>
           More Info
           <img src={rightArrow} alt="" width={30} height={20} />
-        </a>
+        </Link>
       </div>
       <div className={styles.prices}>
         <h3 className={styles.subheading}>Affordable Prices</h3>
@@ -24,10 +25,10 @@ const ChooseUs = () => {
           Premium quality shouldn't break the bank. Enjoy the best items at
           prices designed for your budget.
         </p>
-        <a className={styles.linkMore} href="#">
+        <Link className={`${styles.linkMore} ${styles.inactive}`}>
           More Info
           <img src={rightArrow} alt="" width={30} height={20} />
-        </a>
+        </Link>
       </div>
       <div className={styles.choices}>
         <h3 className={styles.subheading}>Many Choices</h3>
@@ -35,10 +36,10 @@ const ChooseUs = () => {
           Explore an expansive catalog featuring thousands of items and hundreds
           of brands. Your perfect find is just a click away.
         </p>
-        <a className={styles.linkMore} href="#">
+        <Link className={`${styles.linkMore} ${styles.inactive}`}>
           More Info
           <img src={rightArrow} alt="" width={30} height={20} />
-        </a>
+        </Link>
       </div>
     </section>
   )

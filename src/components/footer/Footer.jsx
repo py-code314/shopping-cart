@@ -22,16 +22,24 @@ const Footer = () => {
               <h3 className={styles.subheading}>Customer Service</h3>
               <ul className={styles.footerListPrimary}>
                 <li>
-                  <Link className={styles.footerLink}>FAQ and Help</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    FAQ and Help
+                  </Link>
                 </li>
                 <li>
-                  <Link className={styles.footerLink}>Order Lookup</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    Order Lookup
+                  </Link>
                 </li>
                 <li>
-                  <Link className={styles.footerLink}>Returns</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    Returns
+                  </Link>
                 </li>
                 <li>
-                  <Link className={styles.footerLink}>Shipping & Delivery</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    Shipping & Delivery
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -41,18 +49,24 @@ const Footer = () => {
               <h3 className={styles.subheading}>Stores & Services</h3>
               <ul className={styles.footerListPrimary}>
                 <li className={styles.footerListItem}>
-                  <Link className={styles.footerLink}>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
                     Curbside & In Store Pickup
                   </Link>
                 </li>
                 <li className={styles.footerListItem}>
-                  <Link className={styles.footerLink}>Locations & Hours</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    Locations & Hours
+                  </Link>
                 </li>
                 <li className={styles.footerListItem}>
-                  <Link className={styles.footerLink}>Store Events</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    Store Events
+                  </Link>
                 </li>
                 <li className={styles.footerListItem}>
-                  <Link className={styles.footerLink}>Gift Registry</Link>
+                  <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                    Gift Registry
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -112,10 +126,14 @@ const Footer = () => {
             </li>
             <div className={styles.footerSecondaryLinks}>
               <li className={styles.footerListItem}>
-                <Link className={styles.footerLink}>Terms & Conditions</Link>
+                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                  Terms & Conditions
+                </Link>
               </li>
               <li className={styles.footerListItem}>
-                <Link className={styles.footerLink}>Privacy Policy</Link>
+                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                  Privacy Policy
+                </Link>
               </li>
             </div>
           </ul>

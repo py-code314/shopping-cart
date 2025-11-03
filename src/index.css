@@ -141,7 +141,6 @@ ul {
   --height-hero: 43.75rem; /* 700px */
   --width-hero-content: 47.5rem; /* 760px */
   --width-search-input: 15.625rem; /* 250px */
-  /*--height-card: 27.65rem;  470px */
   --height-product: 26.875rem; /* 430px */
   --width-content: 75rem; /* 1200px */
   --width-footer: 62.5rem; /* 1000px */
@@ -180,7 +179,7 @@ ul {
   --clr-davys-grey: #595959;
   --clr-cultured: #F7F7F7;
   --clr-eerie-black: #1E1E1E;
-  --clr-dark-gunmetal: #1E2833;
+  
   
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */

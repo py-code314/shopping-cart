@@ -1,27 +1,20 @@
 import styles from './Header.module.css'
-import { NavLink } from 'react-router'
-import shoppingBagIcon from '../../assets/images/shopping-bag-icon.svg'
+import { Link, NavLink } from 'react-router'
+import shoppingBag from '../../assets/images/shopping-bag.svg'
+
+//TODO: Add disabled to inactive links, also add href="#" tabindex="-1" aria-disabled="true"
 
 const Header = ({ onClick, onHomeClick }) => {
   return (
     <header className={styles.header}>
-      <div className={styles.imageContainer}>
-        <img
-          className="logo"
-          src={shoppingBagIcon}
-          alt=""
-          width={30}
-          height={30}
-        />
-      </div>
       <h1 className={styles.title}>Anchor</h1>
       <nav className={styles.navbar}>
-        <ul className={styles.navbar__list}>
+        <ul className={styles.navbarList}>
           <li className={styles.navbar__item}>
             <NavLink
               to={`home`}
               className={({ isActive }) =>
-                `${styles.navbar__link} ${isActive ? styles.active : ''}`
+                `${styles.navbarLink} ${isActive ? styles.active : ''}`
               }
               onClick={onHomeClick}>
               Home
@@ -31,24 +24,27 @@ const Header = ({ onClick, onHomeClick }) => {
             <NavLink
               to={`shop`}
               className={({ isActive }) =>
-                `${styles.navbar__link} ${isActive ? styles.active : ''}`
+                `${styles.navbarLink} ${isActive ? styles.active : ''}`
               }
               onClick={onClick}>
               Shop
             </NavLink>
           </li>
           <li className={styles.navbar__item}>
-            <NavLink
-              to={`cart`}
-              className={({ isActive }) =>
-                `${styles.navbar__link} ${isActive ? styles.active : ''}`
-              }
-              onClick={onClick}>
-              Cart
-            </NavLink>
+            <Link className={`${styles.navbarLink} ${styles.inactive}`}>
+              About
+            </Link>
+          </li>
+          <li className={styles.navbar__item}>
+            <Link className={`${styles.navbarLink} ${styles.inactive}`}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
+      <Link to={`cart`} className={styles.cartLink} onClick={onClick}>
+        <img src={shoppingBag} alt="" width={25} height={25} />
+      </Link>
     </header>
   )
 }

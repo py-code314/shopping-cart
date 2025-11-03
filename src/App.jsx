@@ -28,11 +28,16 @@ function App() {
           <Hero />
         </div>
       ) : (
-        <Header onClick={handleClick} onHomeClick={handleHomeClick} />
+        <div className="backgroundColor">
+          <Header
+            onClick={handleClick}
+            onHomeClick={handleHomeClick}
+          />
+        </div>
       )}
 
       <Outlet />
-      <Footer/>
+      <Footer />
     </div>
   )
 }

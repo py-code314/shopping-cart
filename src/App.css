@@ -11,3 +11,7 @@
   background-repeat: no-repeat;
   height: var(--height-hero);
 }
+
+.backgroundColor {
+  background-color: var(--clr-arsenic);
+}
