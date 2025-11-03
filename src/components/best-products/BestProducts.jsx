@@ -1,34 +1,13 @@
-import { useState, useEffect } from 'react'
 import styles from './BestProducts.module.css'
 import { Link } from 'react-router'
 import plusIcon from '../../assets/images/plus-icon.svg'
 import rightArrow from '../../assets/images/arrow-right-icon.svg'
+import { useData } from '../../hooks/useData'
 
 const BestProducts = () => {
-  const [data, setData] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://fakestoreapi.com/products')
-        if (!response.ok) {
-          throw new Error(`HTTP error: Status ${response.status}`)
-        }
-        let data = await response.json()
-        setData(data)
-        setError(null)
-      } catch (err) {
-        setError(err.message)
-        setData(null)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    fetchData()
-  }, [])
+  const { data, isLoading, error } = useData(
+    'https://fakestoreapi.com/products'
+  )
 
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>{error}</div>
@@ -89,7 +68,5 @@ const BestProducts = () => {
     </section>
   )
 }
-
-//TODO: Place buyWrapper out of Link
 
 export default BestProducts
