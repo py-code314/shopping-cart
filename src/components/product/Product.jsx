@@ -85,7 +85,7 @@ const Product = ({ product }) => {
             className={styles.quantity}
             type="number"
             name="quantity"
-            min={0}
+            min={1}
             value={quantity}
             onChange={handleNumberChange}
             required

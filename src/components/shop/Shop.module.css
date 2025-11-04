@@ -11,3 +11,15 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: var(--space-1200) var(--space-800);
 }
+
+.decor {
+  width: var(--space-600);
+  height: var(--space-1100);
+  background-color: var(--clr-fulvous);
+}
+
+.subtitleWrapper {
+  display: flex;
+  align-items:center;
+  gap: var(--space-50);
+}

@@ -3,8 +3,6 @@ import { useData } from '../../hooks/useData'
 import  Product  from "../product/Product";
 
 
-//TODO: Fix showing Hero section on Shop page refresh
-
 const Shop = () => {
   const {
     data: products,
@@ -17,7 +15,10 @@ const Shop = () => {
 
   return (
     <section className={styles.shop}>
-      <h2 className={styles.subtitle}>Explore Our Products</h2>
+      <div className={styles.subtitleWrapper}>
+        <div className={styles.decor}></div>
+        <h2 className={styles.subtitle}>Explore Our Products</h2>
+      </div>
       <ul className={styles.productList}>
         {products &&
           products.map((product) => (
