@@ -63,7 +63,7 @@ const BestProducts = () => {
             </li>
           ))}
       </ul>
-      <Link className={styles.linkMore} to={''}>
+      <Link className={styles.linkMore} to={'/shop'}>
         View All
         <img src={rightArrow} alt="" width={30} height={20} />
       </Link>
