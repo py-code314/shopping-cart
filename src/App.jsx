@@ -1,42 +1,35 @@
-import { Outlet, NavLink } from 'react-router'
+import { Outlet, NavLink, useLocation } from 'react-router'
 import './App.css'
 import Header from './components/header/Header'
 import Hero from './components/hero/Hero'
-import Home from './components/home/Home'
 import { useState } from 'react'
 import Footer from './components/footer/Footer'
 
-// TODO: Style header and nav bar
-
 function App() {
-  const [showHero, setShowHero] = useState(true)
+  const [cartItems, setCartItems] = useState([])
 
-  function handleClick() {
-    // console.log('link clicked')
-    setShowHero(false)
-  }
+  const location = useLocation()
+  const isHome = location.pathname === '/home'
 
-  function handleHomeClick() {
-    // console.log('home clicked')
-    setShowHero(true)
-  }
   return (
     <div className="page">
-      {showHero ? (
-        <div className="backgroundWrapper">
-          <Header onClick={handleClick} onHomeClick={handleHomeClick} />
-          <Hero />
-        </div>
+      {isHome ? (
+        <>
+          <div className="backgroundWrapper">
+            <Header />
+
+            <Hero />
+          </div>
+        </>
       ) : (
-        <div className="backgroundColor">
-          <Header
-            onClick={handleClick}
-            onHomeClick={handleHomeClick}
-          />
-        </div>
+        <>
+          <div className="backgroundColor">
+            <Header />
+          </div>
+        </>
       )}
 
-      <Outlet />
+      <Outlet context={[cartItems, setCartItems]} />
       <Footer />
     </div>
   )

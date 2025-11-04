@@ -53,10 +53,12 @@
 .btnRemove {
   composes: btnAdd from '../best-products/BestProducts.module.css';
   border-radius: var(--radius-1) 0 0 var(--radius-1);
+   background-color: var(--clr-dark-gunmetal);
 }
 .btnAdd {
   composes: btnAdd from '../best-products/BestProducts.module.css';
   border-radius: 0 var(--radius-1) var(--radius-1) 0;
+    background-color: var(--clr-dark-gunmetal);
 }
 
 .quantity {
@@ -73,7 +75,7 @@
 .btnSubmit {
   composes: btn from '../hero/Hero.module.css';
   border-radius: var(--radius-1);
-  background-color: var(--clr-black);
+  background-color: var(--clr-dark-gunmetal);
   color: var(--clr-white);
   padding: var(--space-50) 0;
   font-weight: var(--fw-semibold);
