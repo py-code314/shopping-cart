@@ -8,19 +8,21 @@ const Cart = () => {
   const subTotal = cartItems.reduce((total, product) => total + product.price, 0)
   const length = cartItems.length
 
+  //TODO: Add clearCart function
+
   return (
     <div className={styles.cart}>
       <div className={styles.subtitleWrapper}>
         <div className={styles.decor}></div>
         <h2 className={styles.subtitle}>Cart</h2>
       </div>
-      {length > 0 ? <CartItems /> : <p>Your bag is currently empty.</p>}
+      {length > 0 ? <CartItems items={cartItems} /> : <p>Your bag is currently empty.</p>}
       <div className={styles.actionGroup}>
         <Link className={styles.linkShop} to={'/shop'}>
           Return To Shop
         </Link>
         <button className={styles.update} type="button">
-          Update Cart
+          Clear Cart
         </button>
       </div>
       <div className={styles.cartSummary}>

@@ -28,12 +28,12 @@ const Product = ({ product }) => {
   }
 
   const handleSubmit = (e, id, title, price, quantity) => {
-    console.log('submit clicked')
+    // console.log('submit clicked')
     e.preventDefault()
 
     setCartItems(prevCartItems => {
       const existingItemIndex = prevCartItems.findIndex(item => item.id === id)
-      console.log(existingItemIndex)
+      // console.log(existingItemIndex)
 
       if (existingItemIndex > -1) {
         const updatedCartItems = [...prevCartItems]
@@ -43,8 +43,8 @@ const Product = ({ product }) => {
         }
         return updatedCartItems
       } else {
-        console.log('add new item')
-        return [...prevCartItems, {id: id, title: title, price: price, quantity: quantity}]
+        // console.log('add new item')
+        return [...prevCartItems, { id: id, image: image, title: title, price: price, quantity: quantity}]
       }
     })
   }
