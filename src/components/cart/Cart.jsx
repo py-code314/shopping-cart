@@ -16,12 +16,12 @@ const Cart = () => {
         <div className={styles.decor}></div>
         <h2 className={styles.subtitle}>Cart</h2>
       </div>
-      {length > 0 ? <CartItems items={cartItems} /> : <p>Your bag is currently empty.</p>}
+      {length > 0 ? <CartItems items={cartItems} /> : <p className={styles.emptyBag}>Your bag is currently empty.</p>}
       <div className={styles.actionGroup}>
         <Link className={styles.linkShop} to={'/shop'}>
           Return To Shop
         </Link>
-        <button className={styles.update} type="button">
+        <button className={styles.btnClear} type="button">
           Clear Cart
         </button>
       </div>
@@ -34,24 +34,24 @@ const Cart = () => {
         </div>
         <div className={styles.cartTotal}>
           <h3 className={styles.subheading}>Cart Total</h3>
-          <ul className={styles.cartList}>
-            <li>
+          <ul className={styles.totalList}>
+            <li className={styles.totalItem}>
               <span className={styles.label}>Subtotal</span>
               <span className={styles.value}>${subTotal.toFixed(2)}</span>
             </li>
-            <li>
+            <li className={styles.totalItem}>
               <span className={styles.label}>Savings</span>
               <span className={styles.value}>$0.00</span>
             </li>
-            <li>
+            <li className={styles.totalItem}>
               <span className={styles.label}>Shipping</span>
               <span className={styles.value}>Free</span>
             </li>
-            <li>
+            <li className={styles.totalItem}>
               <span className={styles.label}>Tax</span>
               <span className={styles.value}>TBD</span>
             </li>
-            <li>
+            <li className={styles.totalItem}>
               <span className={styles.label}>Estimated Total</span>
               <span className={styles.value}>${subTotal.toFixed(2)}</span>
             </li>

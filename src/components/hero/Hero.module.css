@@ -37,7 +37,6 @@
 
 .btn {
   border: transparent;
-  border-radius: var(--radius-circle);
   cursor: pointer;
 }
 
@@ -47,6 +46,7 @@
   position: absolute;
   top: var(--space-60);
   right: var(--space-70);
+  border-radius: var(--radius-circle);
 }
 
 .form {

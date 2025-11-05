@@ -187,6 +187,7 @@ ul {
   --radius-1: 0.3125rem; /* 5px */
   --radius-2: 0.625rem; /* 10px */
   --radius-3: 2.625rem; /* 42px */
+  --radius-4: 0.1875rem; /* 3px */
   --radius-circle: 50%;
   --shadow-1: 0px 5px 10px 0px hsla(0, 0%, 0%, 0.36);
   --shadow-2: 5px 5px 10px hsla(0, 0%, 0%, 0.5);
