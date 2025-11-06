@@ -5,6 +5,8 @@
   color: var(--clr-white);
   /* padding: var(--space-400) var(--space-1600); */
   padding: var(--space-400) clamp(1rem, 0.214rem + 3.929vw, 3.75rem);
+  max-width: var(--width-content);
+  margin: auto;
 }
 
 @media (max-width: 36rem /* 576px */) {

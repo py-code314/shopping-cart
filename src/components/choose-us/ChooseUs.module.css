@@ -1,9 +1,16 @@
 .chooseUs {
   padding: var(--space-1600) var(--space-1100);
   display: flex;
-  gap: var(--space-800);
+  gap: var(--space-400);
   max-width: var(--width-content);
   margin: auto;
+}
+
+@media (max-width: 48rem /* 768px */) {
+  .chooseUs {
+    flex-direction: column;
+    gap: var(--space-800);
+  }
 }
 
 .headingWrapper {
@@ -11,20 +18,39 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 48rem /* 768px */) {
+  .headingWrapper {
+    justify-content: center;
+  }
+}
 
 .subtitle {
   font-family: var(--ff-gilroy-bold);
   font-size: var(--fs-800);
 }
 
-.luxury,
-.prices,
-.choices {
+.cards {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-600);
+}
+
+@media (max-width: 48rem /* 768px */) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.card {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--space-400);
+  gap: clamp(0.75rem, 0.679rem + 0.357vw, 1rem);
 }
+
+
 
 .subheading {
   font-family: var(--ff-gilroy-bold);
