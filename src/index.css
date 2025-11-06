@@ -73,6 +73,10 @@ ul {
   font-family: 'DM Sans';
   src: url(./assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
 }
+@font-face {
+  font-family: 'Eagle Horizon';
+  src: url(./assets/fonts/eagle-horizon/EagleHorizonP.ttf);
+}
 
 
 /* ===================
@@ -146,6 +150,7 @@ ul {
   --height-product: 26.875rem; /* 430px */
   --width-content: 75rem; /* 1200px */
   --width-footer: 62.5rem; /* 1000px */
+  --width-error-message: 21.875rem; /* 350px */
   
   
   /* Font weights */
@@ -166,6 +171,7 @@ ul {
   --ff-gilroy-regular: 'Gilroy Regular';
   --ff-inter: Inter;
   --ff-dm-sans: 'DM Sans';
+  --ff-eagle-horizon: 'Eagle Horizon';
 
   
   /* Colors */
@@ -174,6 +180,7 @@ ul {
   --clr-red: hsl(0, 100%, 50%);
   --clr-green: hsl(120, 100%, 25%);
   --clr-blue: hsl(240, 100%, 50%);
+  --clr-light-sky-blue: #95CDFD;
   --clr-dodger-blue: #1E90FF;
   --clr-arsenic: #374244;
   --clr-fulvous: #E58411;
