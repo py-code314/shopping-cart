@@ -63,10 +63,15 @@
   align-items: center;
 }
 .btnAdd {
-  /* composes: btn from '../hero/Hero.module.css'; */
-  composes: btnRemove;
+  composes: btn from '../hero/Hero.module.css';
+  /* composes: btnRemove; */
   border-radius: 0 var(--radius-1) var(--radius-1) 0;
   background-color: var(--clr-dark-gunmetal);
+  width: var(--space-850);
+  height: var(--space-850);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quantity {

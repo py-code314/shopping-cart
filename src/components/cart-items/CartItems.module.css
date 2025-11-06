@@ -53,7 +53,10 @@
 }
 
 .btnQuantity {
-  composes: btn from '../hero/Hero.module.css';
+  /* composes: btn from '../hero/Hero.module.css'; */
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
   padding: 0 var(--space-40);
 }
 

@@ -10,6 +10,10 @@ const Cart = () => {
 
   //TODO: Add clearCart function
 
+  const handleClearCart = () => {
+    setCartItems([])
+  }
+
   return (
     <div className={styles.cart}>
       <div className={styles.subtitleWrapper}>
@@ -21,7 +25,7 @@ const Cart = () => {
         <Link className={styles.linkShop} to={'/shop'}>
           Return To Shop
         </Link>
-        <button className={styles.btnClear} type="button">
+        <button className={styles.btnClear} type="button" onClick={handleClearCart}>
           Clear Cart
         </button>
       </div>
