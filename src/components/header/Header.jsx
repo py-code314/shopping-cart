@@ -4,7 +4,16 @@ import shoppingBag from '../../assets/images/shopping-bag.svg'
 
 //TODO: Add disabled to inactive links, also add href="#" tabindex="-1" aria-disabled="true"
 
-const Header = ({ onClick, onHomeClick }) => {
+const Header = ({ cartItems }) => {
+  // const [cartItems, setCartItems] = useOutletContext()
+  let totalItems = 0
+  if (cartItems) {
+    totalItems = cartItems.reduce(
+      (total, product) => total + product.quantity,
+      0
+    )
+  }
+
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>Anchor</h1>
@@ -15,8 +24,7 @@ const Header = ({ onClick, onHomeClick }) => {
               to={`home`}
               className={({ isActive }) =>
                 `${styles.navbarLink} ${isActive ? styles.active : ''}`
-              }
-              onClick={onHomeClick}>
+              }>
               Home
             </NavLink>
           </li>
@@ -25,8 +33,7 @@ const Header = ({ onClick, onHomeClick }) => {
               to={`shop`}
               className={({ isActive }) =>
                 `${styles.navbarLink} ${isActive ? styles.active : ''}`
-              }
-              onClick={onClick}>
+              }>
               Shop
             </NavLink>
           </li>
@@ -42,8 +49,9 @@ const Header = ({ onClick, onHomeClick }) => {
           </li>
         </ul>
       </nav>
-      <Link to={`cart`} className={styles.cartLink} onClick={onClick}>
+      <Link to={`cart`} className={styles.cartLink}>
         <img src={shoppingBag} alt="" width={25} height={25} />
+        <p className={styles.noOfItems}>{totalItems}</p>
       </Link>
     </header>
   )

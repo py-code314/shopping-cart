@@ -8,7 +8,6 @@ const Cart = () => {
   const subTotal = cartItems.reduce((total, product) => total + product.price, 0)
   const length = cartItems.length
 
-  //TODO: Add clearCart function
 
   const handleClearCart = () => {
     setCartItems([])

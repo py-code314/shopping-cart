@@ -24,7 +24,7 @@ function App() {
       ) : (
         <>
           <div className="backgroundColor">
-            <Header />
+              <Header cartItems={ cartItems} />
           </div>
         </>
       )}

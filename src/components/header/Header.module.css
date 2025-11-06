@@ -31,3 +31,24 @@
 .inactive {
   pointer-events: none;
 }
+
+.cartLink {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.noOfItems {
+  color: var(--clr-white);
+  background-color: var(--clr-red);
+  border-radius: var(--radius-circle);
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-200);
+  position: absolute;
+  right: -3px;
+  top: -1px;
+}
