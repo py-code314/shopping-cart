@@ -1,6 +1,6 @@
 import styles from './CartItems.module.css'
-import minusIcon from '../../assets/images/minus-icon.svg'
-import plusIcon from '../../assets/images/plus-icon.svg'
+import minusIcon from '../../assets/images/minus-icon-black.svg'
+import plusIcon from '../../assets/images/plus-icon-black.svg'
 import { useOutletContext } from 'react-router'
 // import { useState } from 'react'
 
@@ -69,33 +69,48 @@ const CartItems = ({ items }) => {
     <table className={styles.table}>
       <thead className={styles.tableHead}>
         <tr className={styles.tableRow}>
-          <th className={styles.tableHeading}>Product</th>
-          <th className={styles.tableHeading}>Price</th>
-          <th className={styles.tableHeading}>Quantity</th>
-          <th className={styles.tableHeading}>Subtotal</th>
+          <th className={`${styles.tableHeading} ${styles.product}`}>
+            Product
+          </th>
+          <th className={`${styles.tableHeading} ${styles.price}`}>Price</th>
+          <th className={`${styles.tableHeading} ${styles.noOfItems}`}>
+            Quantity
+          </th>
+          <th className={`${styles.tableHeading} ${styles.subTotal}`}>
+            Subtotal
+          </th>
         </tr>
       </thead>
       <tbody className={styles.tableBody}>
         {items.map((item) => (
           <tr className={styles.tableRow} key={item.id}>
-            <td className={styles.tableCell}>
-              <img className={styles.image} src={item.image} alt={item.title} />
-              <span className={styles.title} >{item.title}</span>
+            <td className={`${styles.tableCell} ${styles.product}`}>
+              <div className={styles.imageTitleWrapper}>
+                <img
+                  className={styles.image}
+                  src={item.image}
+                  alt={item.title}
+                  width={40}
+                />
+                <span className={styles.title}>{item.title}</span>
+              </div>
             </td>
 
-            <td className={styles.tableCell}>${item.price.toFixed(2)}</td>
-            <td className={styles.tableCell}>
+            <td className={`${styles.tableCell} ${styles.price}`}>
+              ${item.price.toFixed(2)}
+            </td>
+            <td className={`${styles.tableCell} ${styles.noOfItems}`}>
               <div className={styles.inputWrapper}>
                 <button
-                  className={styles.btnRemove}
+                  className={styles.btnQuantity}
                   type="button"
                   onClick={() => handleDecrement(item.id)}>
                   <img
                     className={styles.btnIcon}
                     src={minusIcon}
                     alt=""
-                    width={20}
-                    height={20}
+                    width={15}
+                    height={15}
                   />
                 </button>
                 <input
@@ -107,20 +122,22 @@ const CartItems = ({ items }) => {
                   onChange={(e) => handleInputChange(e, item.id)}
                 />
                 <button
-                  className={styles.btnAdd}
+                  className={styles.btnQuantity}
                   type="button"
                   onClick={() => handleIncrement(item.id)}>
                   <img
                     className={styles.btnIcon}
                     src={plusIcon}
                     alt=""
-                    width={20}
-                    height={20}
+                    width={15}
+                    height={15}
                   />
                 </button>
               </div>
             </td>
-            <td className={styles.tableCell}>${(item.price * item.quantity).toFixed(2)}</td>
+            <td className={`${styles.tableCell} ${styles.subTotal}`}>
+              ${(item.price * item.quantity).toFixed(2)}
+            </td>
           </tr>
         ))}
       </tbody>

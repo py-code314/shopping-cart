@@ -38,6 +38,7 @@
 .btn {
   border: transparent;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .btnSearch {

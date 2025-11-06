@@ -1,0 +1,71 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-600);
+}
+
+.tableHeading {
+  font-family: var(--ff-gilroy-medium);
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-600);
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  padding: var(--space-600);
+  padding-inline-start: var(--space-1600);
+  font-family: var(--ff-gilroy-medium);
+  gap: var(--space-600);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: var(--radius-4);
+}
+
+.product {
+  flex: 5;
+}
+
+.price,
+.noOfItems,
+.subTotal {
+  flex: 1;
+}
+
+.tableHeading,
+.tableCell {
+  display: flex;
+}
+
+.imageTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-400);
+}
+
+.inputWrapper {
+  display: flex;
+  border: 1px solid var(--clr-black);
+}
+
+.btnQuantity {
+  composes: btn from '../hero/Hero.module.css';
+  padding: 0 var(--space-40);
+}
+
+.quantity {
+  border: transparent;
+  border-inline-start: 1px solid var(--clr-black);
+  border-inline-end: 1px solid var(--clr-black);
+  width: var(--space-800);
+  text-align: center;
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+  appearance: none;
+}
