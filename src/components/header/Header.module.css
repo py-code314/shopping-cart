@@ -3,7 +3,15 @@
   justify-content: space-between;
   align-items: center;
   color: var(--clr-white);
-  padding: var(--space-400) var(--space-1600);
+  /* padding: var(--space-400) var(--space-1600); */
+  padding: var(--space-400) clamp(1rem, 0.214rem + 3.929vw, 3.75rem);
+}
+
+@media (max-width: 36rem /* 576px */) {
+.header {
+  flex-direction: column;
+  position: relative;
+}
 }
 
 .title {
@@ -12,7 +20,8 @@
 
 .navbarList {
   display: flex;
-  gap: var(--space-800);
+  /* gap: var(--space-800); */
+  gap: clamp(0.5rem, 0.143rem + 1.786vw, 1.75rem);
 }
 
 .navbarLink {
@@ -38,12 +47,21 @@
   position: relative;
 }
 
+@media (max-width: 36rem /* 576px */) {
+.cartLink {
+  /* transform: translate(13rem, -4rem); */
+  position: absolute;
+  top: var(--space-725);
+  right: var(--space-1350);
+}
+}
+
 .noOfItems {
   color: var(--clr-white);
   background-color: var(--clr-red);
   border-radius: var(--radius-circle);
-  width: 15px;
-  height: 15px;
+  width: var(--space-350);
+  height: var(--space-350);
   display: flex;
   justify-content: center;
   align-items: center;
