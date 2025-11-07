@@ -14,20 +14,20 @@
 }
 
 .footerPrimary {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-1600);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1100);
 }
 
 .card {
   display: flex;
   flex-direction: column;
   gap: var(--space-400);
-}
-@media (max-width: 36rem /* 576px */) {
-  .card {
-    align-items: center;
-  }
+  align-items: center;
+  flex: 1;
+  min-width: var(--min-width-card);
+  max-width: var(--max-width-card);
 }
 
 .about {
@@ -40,10 +40,8 @@
   font-family: var(--ff-gilroy-bold);
 }
 
-@media (max-width: 36rem /* 576px */) {
-  .description {
-    text-align: center;
-  }
+.description {
+  text-align: center;
 }
 
 .subheading {
@@ -55,12 +53,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-400);
+  align-items: center;
 }
-@media (max-width: 36rem /* 576px */) {
-  .footerListPrimary {
-    align-items: center;
-  }
-}
+
 
 .footerLink {
   text-decoration: none;

@@ -13,9 +13,16 @@
 }
 
 .productList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-600);
+}
+
+@media (max-width: 48rem /* 768px */) {
+  .productList {
+    gap: var(--space-1600);
+  }
 }
 
 .product {
@@ -24,6 +31,9 @@
   /* display: flex-column to prevent card taking up too much height */
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: var(--min-width-card);
+  max-width: var(--max-width-card);
 }
 
 .card {
@@ -40,7 +50,7 @@
 
 .contentWrapper {
   height: 40%;
-  padding: var(--space-100);
+  padding: var(--space-100) var(--space-100) 0;
   color: var(--clr-black);
 }
 
