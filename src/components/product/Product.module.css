@@ -41,7 +41,6 @@
 
 .buyWrapper {
   height: 15%;
-  /* margin-block-start: auto; */
   padding: 0 var(--space-100);
   display: flex;
   flex-direction: column;
@@ -53,9 +52,9 @@
 }
 
 .btnRemove {
-  composes: btn from '../hero/Hero.module.css';
-  /* border: transparent;
-  cursor: pointer; */
+  /* composes: btn from '../hero/Hero.module.css'; */
+  border: transparent;
+  cursor: pointer;
   border-radius: var(--radius-1) 0 0 var(--radius-1);
   background-color: var(--clr-dark-gunmetal);
   width: var(--space-850);
@@ -65,9 +64,9 @@
   align-items: center;
 }
 .btnAdd {
-  composes: btn from '../hero/Hero.module.css';
-  /* border: transparent;
-  cursor: pointer; */
+  /* composes: btn from '../hero/Hero.module.css'; */
+  border: transparent;
+  cursor: pointer;
   border-radius: 0 var(--radius-1) var(--radius-1) 0;
   background-color: var(--clr-dark-gunmetal);
   width: var(--space-850);
@@ -90,7 +89,9 @@
 }
 
 .btnSubmit {
-  composes: btn from '../hero/Hero.module.css';
+  /* composes: btn from '../hero/Hero.module.css'; */
+  border: transparent;
+  cursor: pointer;
   border-radius: var(--radius-1);
   background-color: var(--clr-dark-gunmetal);
   color: var(--clr-white);

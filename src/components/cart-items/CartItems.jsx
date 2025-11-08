@@ -36,7 +36,6 @@ const CartItems = ({ items }) => {
     })
   }
 
-
   const handleInputChange = (e, id) => {
     const newQuantity = Number(e.target.value)
 
@@ -44,7 +43,7 @@ const CartItems = ({ items }) => {
       const updatedCart = prevCartItems.map((item) => {
         if (item.id === id) {
           // If newQuantity is NaN don't change the value
-          // If user empties input quantity value is empty string 
+          // If user empties input quantity value is empty string
           // After which if user enters a number into input, change it to a number and assign it to quantity
           return {
             ...item,
@@ -83,17 +82,16 @@ const CartItems = ({ items }) => {
       </thead>
       <tbody className={styles.tableBody}>
         {items.map((item) => (
-          <tr className={styles.tableRow} key={item.id}>
-            <td className={`${styles.tableCell} ${styles.product}`}>
-              <div className={styles.imageTitleWrapper}>
-                <img
-                  className={styles.image}
-                  src={item.image}
-                  alt={item.title}
-                  width={40}
-                />
-                <span className={styles.title}>{item.title}</span>
-              </div>
+          <tr className={`${styles.tableRow} ${styles.cartItem}`} key={item.id}>
+            <td
+              className={`${styles.tableCell} ${styles.imageTitle}`}>
+              <img
+                className={styles.image}
+                src={item.image}
+                alt={item.title}
+                width={40}
+              />
+              <p className={styles.title}>{item.title}</p>
             </td>
 
             <td className={`${styles.tableCell} ${styles.price}`}>

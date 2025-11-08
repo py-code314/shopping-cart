@@ -1,5 +1,11 @@
 .cart {
-  composes: bestProducts from '../best-products/BestProducts.module.css';
+  /* composes: bestProducts from '../best-products/BestProducts.module.css'; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1200);
+  padding: clamp(1rem, 0.571rem + 2.143vw, 2.5rem);
+  max-width: var(--width-content);
+  margin: auto;
 }
 
 .subtitleWrapper {
@@ -35,6 +41,13 @@
   gap: var(--space-600);
 }
 
+@media (max-width: 36rem /* 576px */) {
+  .cartSummary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .btnLayout {
   text-decoration: none;
   padding: var(--space-70) var(--space-600);
@@ -58,6 +71,12 @@
   display: flex;
   gap: var(--space-100);
   flex: 1;
+}
+
+@media (max-width: 52rem /* 832px */) {
+  .inputWrapper {
+    flex-direction: column;
+  }
 }
 
 .coupon {
