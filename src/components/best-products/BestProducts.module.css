@@ -26,30 +26,29 @@
 }
 
 .product {
-  height: var(--height-product);
   font-family: var(--ff-inter);
-  /* display: flex-column to prevent card taking up too much height */
-  display: flex;
-  flex-direction: column;
   flex: 1;
   min-width: var(--min-width-card);
   max-width: var(--max-width-card);
+
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  gap: var(--space-400);
 }
 
 .card {
-  height: 90%;
   text-decoration: none;
+  display: grid;
+  grid-template-rows: 225px 1fr;
 }
 
 .imageWrapper {
-  height: 60%;
   background-color: var(--clr-lotion);
   padding: var(--space-200) 0;
   border-radius: var(--radius-2);
 }
 
 .contentWrapper {
-  height: 40%;
   padding: var(--space-100) var(--space-100) 0;
   color: var(--clr-black);
 }
@@ -70,8 +69,12 @@
   font-weight: var(--fw-semibold);
 }
 
+.price {
+  font-size: var(--fs-600);
+}
+
 .rate {
-  color: var(--clr-fulvous);
+  color: var(--clr-saddle-brown);
 }
 
 .dollar {
@@ -80,7 +83,6 @@
 }
 
 .buyWrapper {
-  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,11 +93,10 @@
   composes: btn from '../hero/Hero.module.css';
   border-radius: var(--radius-circle);
   background-color: var(--clr-black);
-  width: var(--space-850);
-  height: var(--space-850);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6px;
 }
 
 .linkMore {

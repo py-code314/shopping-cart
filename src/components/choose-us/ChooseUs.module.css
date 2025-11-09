@@ -69,7 +69,8 @@
   align-items: center;
   margin-block-start: auto;
   text-decoration: none;
-  color: var(--clr-fulvous);
+  color: var(--clr-saddle-brown);
+
   font-family: var(--ff-gilroy-medium);
 }
 

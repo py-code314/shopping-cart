@@ -30,11 +30,27 @@
 }
 
 .search {
-  padding: var(--fs-80) var(--fs-80) var(--fs-80) var(--fs-600);
+  padding: var(--space-150) var(--space-150) var(--space-150) var(--fs-600);
   border-radius: var(--radius-3);
   border: 1px solid var(--clr-white);
   width: var(--width-search-input);
   background-color: transparent;
+}
+
+::placeholder {
+  color: var(--clr-white);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .btn {
@@ -45,11 +61,15 @@
 
 .btnSearch {
   composes: btn;
-  background-color: var(--clr-fulvous);
+  background-color: var(--clr-saddle-brown);
   position: absolute;
-  top: var(--space-60);
-  right: var(--space-70);
+  /* top: var(--space-60); */
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--space-30);
+  /* right: 0; */
   border-radius: var(--radius-circle);
+  padding: 2px;
 }
 
 .form {

@@ -148,6 +148,7 @@ ul {
   --height-hero: 43.75rem; /* 700px */
   --width-hero-content: 47.5rem; /* 760px */
   --width-search-input: 15.625rem; /* 250px */
+  --width-search-input: clamp(16.875rem, 16.339rem + 2.679vw, 18.75rem);
   --height-product: 26.25rem;  /* 420px ; */
   --width-content: 75rem; /* 1200px */
   --width-footer: 62.5rem; /* 1000px */
@@ -187,6 +188,7 @@ ul {
   --clr-dodger-blue: #1E90FF;
   --clr-arsenic: #374244;
   --clr-fulvous: #E58411;
+  --clr-saddle-brown: #883E0C;
   --clr-lotion: #FAFAFA;
   --clr-davys-grey: #595959;
   --clr-cultured: #F7F7F7;

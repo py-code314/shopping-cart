@@ -50,13 +50,17 @@ const BestProducts = () => {
                   <span className={styles.dollar}>$</span>
                   {product.price.toFixed(2)}
                 </p>
-                <button className={styles.btnAdd}>
+                <button
+                  className={styles.btnAdd}
+                  type="button"
+                  aria-label="Add to cart"
+                  title="Add To Cart">
                   <img
                     className={styles.btnIcon}
                     src={plusIcon}
                     alt=""
-                    width={20}
-                    height={20}
+                    width={32}
+                    height={32}
                   />
                 </button>
               </div>
