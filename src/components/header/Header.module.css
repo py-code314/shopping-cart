@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   color: var(--clr-white);
-  /* padding: var(--space-400) var(--space-1600); */
   padding: var(--space-400) clamp(1rem, 0.214rem + 3.929vw, 3.75rem);
   max-width: var(--width-content);
   margin: auto;
@@ -22,7 +21,6 @@
 
 .navbarList {
   display: flex;
-  /* gap: var(--space-800); */
   gap: clamp(0.5rem, 0.143rem + 1.786vw, 1.75rem);
 }
 
@@ -30,12 +28,13 @@
   padding: var(--space-100);
   text-decoration: none;
   color: var(--clr-white);
-  font-family: var(--ff-gilroy-medium);
+  font-family: var(--ff-gilroy-bold);
 }
 
 .active {
-  background-color: var(--clr-dodger-blue);
+  background-color: var(--clr-saddle-brown);
   color: var(--clr-white);
+  border: 2px solid var(--clr-white);
   border-radius: var(--radius-1);
 }
 
@@ -60,7 +59,7 @@
 
 .noOfItems {
   color: var(--clr-white);
-  background-color: var(--clr-red);
+  background-color: var(--clr-saddle-brown);
   border-radius: var(--radius-circle);
   width: var(--space-350);
   height: var(--space-350);
@@ -71,4 +70,5 @@
   position: absolute;
   right: -3px;
   top: -1px;
+  font-family: var(--ff-gilroy-bold);
 }
