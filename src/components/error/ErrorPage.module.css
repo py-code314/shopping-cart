@@ -5,17 +5,27 @@
   background-repeat: no-repeat;
   height: 100svh;
   font-family: var(--ff-dm-sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contentWrapper {
   width: var(--width-error-message);
   height: var(--width-error-message);
   padding: var(--space-600);
-  transform: translate(40rem, 5rem);
   font-family: var(--ff-dm-sans);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-600);
   line-height: 2.2;
+  transform: translate(10rem, -10rem);
+}
+
+@media (max-width: 39rem /* 992px */) {
+  .contentWrapper {
+    transform: translateY(-10rem);
+  }
+  
 }
 
 .linkHome {
@@ -31,4 +41,5 @@
   text-transform: uppercase;
   font-family: var(--ff-eagle-horizon);
   letter-spacing: 0.4em;
+  color: #013E67;
 }
