@@ -1,9 +1,17 @@
 .shop {
-  composes: bestProducts from '../best-products/BestProducts.module.css';
+  /* composes: bestProducts from '../best-products/BestProducts.module.css'; */
+   display: flex;
+  flex-direction: column;
+  gap: var(--space-1200);
+  padding: var(--space-1100);
+  max-width: var(--width-content);
+  margin: auto;
 }
 
 .subtitle {
-  composes: subtitle from '../choose-us/ChooseUs.module.css';
+  /* composes: subtitle from '../choose-us/ChooseUs.module.css'; */
+  font-family: var(--ff-gilroy-bold);
+  font-size: var(--fs-800);
 }
 
 .productList {
@@ -15,7 +23,7 @@
 .decor {
   width: var(--space-600);
   height: var(--space-1100);
-  background-color: var(--clr-fulvous);
+  background-color: var(--clr-saddle-brown);
 }
 
 .subtitleWrapper {

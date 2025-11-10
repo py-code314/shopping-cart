@@ -7,7 +7,7 @@ const ErrorPage = () => {
   console.error(error)
 
   return (
-    <div className={styles.error}>
+    <main className={styles.error}>
       <div className={styles.contentWrapper}>
         <h1>OOps!</h1>
         <p>Something's wrong here...</p>
@@ -20,7 +20,7 @@ const ErrorPage = () => {
           or go to a <span className={styles.beach}>beach.</span>
         </p>
       </div>
-    </div>
+    </main>
   )
 }
 

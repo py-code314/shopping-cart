@@ -21,25 +21,26 @@ const Footer = () => {
           <div className={styles.card}>
             <h3 className={styles.subheading}>Customer Service</h3>
             <ul className={styles.footerListPrimary}>
+              {/* Using 'span' instead of 'Link' as it's giving an alert on Accessibility check */}
               <li>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   FAQ and Help
-                </Link>
+                </span>
               </li>
               <li>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Order Lookup
-                </Link>
+                </span>
               </li>
               <li>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Returns
-                </Link>
+                </span>
               </li>
               <li>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Shipping & Delivery
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -48,24 +49,24 @@ const Footer = () => {
             <h3 className={styles.subheading}>Stores & Services</h3>
             <ul className={styles.footerListPrimary}>
               <li className={styles.footerListItem}>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Curbside & In Store Pickup
-                </Link>
+                </span>
               </li>
               <li className={styles.footerListItem}>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Locations & Hours
-                </Link>
+                </span>
               </li>
               <li className={styles.footerListItem}>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Store Events
-                </Link>
+                </span>
               </li>
               <li className={styles.footerListItem}>
-                <Link className={`${styles.footerLink} ${styles.inactive}`}>
+                <span className={styles.footerLink}>
                   Gift Registry
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -120,14 +121,14 @@ const Footer = () => {
           <p className={styles.copyright}>Copyright &copy; 2025</p>
           <ul className={styles.footerListSecondary}>
             <li className={styles.footerListItem}>
-              <Link className={`${styles.footerLink} ${styles.inactive}`}>
+              <span className={styles.footerLink}>
                 Terms & Conditions
-              </Link>
+              </span>
             </li>
             <li className={styles.footerListItem}>
-              <Link className={`${styles.footerLink} ${styles.inactive}`}>
+              <span className={styles.footerLink}>
                 Privacy Policy
-              </Link>
+              </span>
             </li>
           </ul>
         </div>

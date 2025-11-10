@@ -17,6 +17,10 @@
   border-radius: var(--radius-1);
 }
 
-.inactive {
+/* .inactive {
   pointer-events: none;
+} */
+
+.navItem {
+  font-family: var(--ff-gilroy-bold);
 }

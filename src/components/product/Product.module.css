@@ -12,7 +12,10 @@
 }
 
 .image {
-  composes: image from '../best-products/BestProducts.module.css';
+  /* composes: image from '../best-products/BestProducts.module.css'; */
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .contentWrapper {
@@ -21,7 +24,9 @@
 }
 
 .category {
-  composes: category from '../best-products/BestProducts.module.css';
+  /* composes: category from '../best-products/BestProducts.module.css'; */
+  color: var(--clr-davys-grey);
+  text-transform: capitalize;
 }
 
 .title,
@@ -34,7 +39,9 @@
 }
 
 .dollar {
-  composes: dollar from '../best-products/BestProducts.module.css';
+  /* composes: dollar from '../best-products/BestProducts.module.css'; */
+   vertical-align: super;
+  font-size: var(--fs-200);
 }
 
 .buyWrapper {
@@ -85,7 +92,8 @@
 }
 
 .visuallyHidden {
-  position: absolute;
+  /* composes: visuallyHidden from '../hero/Hero.module.css'; */
+   position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;

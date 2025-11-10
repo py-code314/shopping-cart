@@ -7,6 +7,7 @@ import { useOutletContext } from 'react-router'
 const CartItems = ({ items }) => {
   const [cartItems, setCartItems] = useOutletContext()
   // const [quantity, setQuantity] = useState(0)
+  // console.log(cartItems)
 
   const handleIncrement = (id) => {
     setCartItems((prevCartItems) => {
@@ -83,12 +84,11 @@ const CartItems = ({ items }) => {
       <tbody className={styles.tableBody}>
         {items.map((item) => (
           <tr className={`${styles.tableRow} ${styles.cartItem}`} key={item.id}>
-            <td
-              className={`${styles.tableCell} ${styles.imageTitle}`}>
+            <td className={`${styles.tableCell} ${styles.imageTitle}`}>
               <img
                 className={styles.image}
                 src={item.image}
-                alt={item.title}
+                alt=''
                 width={40}
               />
               <p className={styles.title}>{item.title}</p>
@@ -102,16 +102,22 @@ const CartItems = ({ items }) => {
                 <button
                   className={styles.btnQuantity}
                   type="button"
+                  aria-label="Decrease quantity by one"
+                  title="Decrease quantity"
                   onClick={() => handleDecrement(item.id)}>
                   <img
                     className={styles.btnIcon}
                     src={minusIcon}
                     alt=""
-                    width={15}
-                    height={15}
+                    width={32}
+                    height={32}
                   />
                 </button>
+                <label className={styles.visuallyHidden} htmlFor={item.id}>
+                  Quantity
+                </label>
                 <input
+                  id={item.id}
                   className={styles.quantity}
                   type="number"
                   name="quantity"
@@ -122,13 +128,15 @@ const CartItems = ({ items }) => {
                 <button
                   className={styles.btnQuantity}
                   type="button"
+                  aria-label="Increase quantity by one"
+                  title="Increase quantity"
                   onClick={() => handleIncrement(item.id)}>
                   <img
                     className={styles.btnIcon}
                     src={plusIcon}
                     alt=""
-                    width={15}
-                    height={15}
+                    width={32}
+                    height={32}
                   />
                 </button>
               </div>

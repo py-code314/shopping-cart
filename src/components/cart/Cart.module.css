@@ -17,11 +17,13 @@
 .decor {
   width: var(--space-600);
   height: var(--space-1100);
-  background-color: var(--clr-fulvous);
+  background-color: var(--clr-saddle-brown);
 }
 
 .subtitle {
-  composes: subtitle from '../choose-us/ChooseUs.module.css';
+  /* composes: subtitle from '../choose-us/ChooseUs.module.css'; */
+   font-family: var(--ff-gilroy-bold);
+  font-size: var(--fs-800);
 }
 
 .emptyBag {
@@ -62,9 +64,25 @@
 }
 
 .btnClear {
-  composes: btnLayout, btn from '../hero/Hero.module.css';
+  composes: btnLayout;
+  border: transparent;
+  cursor: pointer;
+  /* background-color: transparent; */
   color: var(--clr-white);
   background-color: var(--clr-black);
+}
+
+.visuallyHidden {
+  /* composes: visuallyHidden from '../hero/Hero.module.css'; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .inputWrapper {
@@ -84,8 +102,11 @@
 }
 
 .btnCoupon {
-  composes: btnLayout, btn from '../hero/Hero.module.css';
-  background-color: var(--clr-fulvous);
+  composes: btnLayout;
+  border: transparent;
+  cursor: pointer;
+  background-color: var(--clr-saddle-brown);
+  color: var(--clr-white);
 }
 
 .cartTotal {
@@ -118,6 +139,12 @@
 .linkCheckout {
   composes: btnLayout;
   align-self: center;
-  background-color: var(--clr-fulvous);
-  color: var(--clr-black);
+  background-color: var(--clr-saddle-brown);
+  color: var(--clr-white);
+}
+
+.estTotal {
+  font-family: var(--ff-gilroy-medium);
+  font-size: var(--fs-600);
+  color: var(--clr-saddle-brown);
 }

@@ -1,11 +1,11 @@
 import styles from './Navbar.module.css'
-import { NavLink, Link } from 'react-router';
+import { NavLink, Link } from 'react-router'
 
 const NavBar = () => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navbarList}>
-        <li className={styles.navbar__item}>
+        <li className={styles.navItem}>
           <NavLink
             to={`home`}
             className={({ isActive }) =>
@@ -14,7 +14,7 @@ const NavBar = () => {
             Home
           </NavLink>
         </li>
-        <li className={styles.navbar__item}>
+        <li className={styles.navItem}>
           <NavLink
             to={`shop`}
             className={({ isActive }) =>
@@ -23,19 +23,12 @@ const NavBar = () => {
             Shop
           </NavLink>
         </li>
-        <li className={styles.navbar__item}>
-          <Link className={`${styles.navbarLink} ${styles.inactive}`}>
-            About
-          </Link>
-        </li>
-        <li className={styles.navbar__item}>
-          <Link className={`${styles.navbarLink} ${styles.inactive}`}>
-            Contact
-          </Link>
-        </li>
+        {/* Not using NavLink because it's showing an alert on Accessibility check */}
+        <li className={styles.navItem}>About</li>
+        <li className={styles.navItem}>Contact</li>
       </ul>
     </nav>
   )
 }
- 
-export default NavBar;
+
+export default NavBar

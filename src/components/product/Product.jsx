@@ -83,13 +83,13 @@ const Product = ({ product }) => {
               height={32}
             />
           </button>
-          <label className={styles.visuallyHidden} htmlFor="quantity">
+          <label className={styles.visuallyHidden} htmlFor={id}>
             Quantity
           </label>
            {/* Add max value to make input shrinkable  */}
           <input
             className={styles.quantity}
-            id="quantity"
+            id={id}
             type="number"
             name="quantity"
             min={1}

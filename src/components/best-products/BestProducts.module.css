@@ -8,8 +8,10 @@
 }
 
 .subtitle {
+   /* composes: subtitle from '../choose-us/ChooseUs.module.css'; */
   text-align: center;
-  composes: subtitle from '../choose-us/ChooseUs.module.css';
+  font-family: var(--ff-gilroy-bold);
+  font-size: var(--fs-800);
 }
 
 .productList {
@@ -90,7 +92,10 @@
 }
 
 .btnAdd {
-  composes: btn from '../hero/Hero.module.css';
+  /* composes: btn from '../hero/Hero.module.css'; */
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
   border-radius: var(--radius-circle);
   background-color: var(--clr-black);
   display: flex;
@@ -100,7 +105,14 @@
 }
 
 .linkMore {
-  composes: linkMore from '../choose-us/ChooseUs.module.css';
+  /* composes: linkMore from '../choose-us/ChooseUs.module.css'; */
+  display: flex;
+  gap: var(--space-60);
+  align-items: center;
+  margin-block-start: auto;
+  text-decoration: none;
+  color: var(--clr-saddle-brown);
   justify-content: center;
   padding: var(--space-400);
+  font-family: var(--ff-gilroy-medium);
 }

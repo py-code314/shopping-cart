@@ -30,7 +30,8 @@ const Cart = () => {
       </div>
       <div className={styles.cartSummary}>
         <div className={styles.inputWrapper}>
-          <input type="text" className={styles.coupon} name="coupon" />
+          <label className={styles.visuallyHidden} htmlFor="coupon">Coupon code</label>
+          <input type="text" className={styles.coupon} name="coupon" id='coupon' />
           <button type="button" className={styles.btnCoupon}>
             Apply Coupon
           </button>
@@ -56,7 +57,7 @@ const Cart = () => {
             </li>
             <li className={styles.totalItem}>
               <span className={styles.label}>Estimated Total</span>
-              <span className={styles.value}>${subTotal.toFixed(2)}</span>
+              <span className={`${styles.value} ${styles.estTotal}`}>${subTotal.toFixed(2)}</span>
             </li>
           </ul>
           <Link className={styles.linkCheckout}>Proceed To Checkout</Link>
