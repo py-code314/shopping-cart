@@ -104,9 +104,14 @@
   padding: 6px;
 }
 
+.btnAdd:focus-visible {
+  outline: 2px solid var(--clr-black);
+  outline-offset: 2px;
+}
+
 .linkMore {
   /* composes: linkMore from '../choose-us/ChooseUs.module.css'; */
-  display: flex;
+  display: inline-flex;
   gap: var(--space-60);
   align-items: center;
   margin-block-start: auto;

@@ -63,6 +63,12 @@
   background-color: var(--clr-black);
 }
 
+.linkShop:focus-visible {
+  outline: 2px solid var(--clr-dark-gunmetal);
+  outline-offset: 2px;
+  border-radius: var(--radius-1);
+}
+
 .btnClear {
   composes: btnLayout;
   border: transparent;
@@ -70,6 +76,12 @@
   /* background-color: transparent; */
   color: var(--clr-white);
   background-color: var(--clr-black);
+}
+
+.btnClear:focus-visible {
+  outline: 2px solid var(--clr-dark-gunmetal);
+  outline-offset: 2px;
+  border-radius: var(--radius-1);
 }
 
 .visuallyHidden {
@@ -109,6 +121,12 @@
   color: var(--clr-white);
 }
 
+.btnCoupon:focus-visible {
+  outline: 2px solid var(--clr-saddle-brown);
+  outline-offset: 2px;
+  border-radius: var(--radius-1);
+}
+
 .cartTotal {
   flex: 1;
   padding: var(--space-600);
@@ -141,6 +159,12 @@
   align-self: center;
   background-color: var(--clr-saddle-brown);
   color: var(--clr-white);
+}
+
+.linkCheckout:focus-visible {
+  outline: 2px solid var(--clr-saddle-brown);
+  outline-offset: 2px;
+  border-radius: var(--radius-1);
 }
 
 .estTotal {

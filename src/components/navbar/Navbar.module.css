@@ -10,6 +10,12 @@
   font-family: var(--ff-gilroy-bold);
 }
 
+.navbarLink:focus-visible {
+  outline: 3px solid var(--clr-white);
+  outline-offset: 1px;
+  border-radius: var(--radius-1);
+}
+
 .active {
   background-color: var(--clr-saddle-brown);
   color: var(--clr-white);

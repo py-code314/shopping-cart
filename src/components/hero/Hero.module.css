@@ -41,6 +41,10 @@
   color: var(--clr-white);
 }
 
+.search:focus-visible {
+  outline: 3px solid var(--clr-white);
+}
+
 .visuallyHidden {
   position: absolute;
   width: 1px;
@@ -69,7 +73,11 @@
   right: var(--space-30);
   /* right: 0; */
   border-radius: var(--radius-circle);
-  padding: 2px;
+  padding: 1px;
+}
+
+.btnSearch:focus-visible {
+  outline: 3px solid var(--clr-white);
 }
 
 .form {

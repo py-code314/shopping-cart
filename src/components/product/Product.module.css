@@ -81,6 +81,12 @@
   align-items: center;
 }
 
+.btnRemove:focus-visible,
+.btnAdd:focus-visible {
+  outline: 2px solid var(--clr-dark-gunmetal);
+  outline-offset: 2px;
+}
+
 .quantity {
   text-align: center;
   flex: 1 1 0;
@@ -89,6 +95,12 @@
   min-width: 0;
   font-weight: var(--fw-semibold);
   font-size: var(--space-600);
+}
+
+.quantity:focus-visible {
+  outline: 3px solid var(--clr-true-blue);
+  border-radius: var(--radius-1);
+  border: transparent;
 }
 
 .visuallyHidden {
@@ -119,4 +131,10 @@
   color: var(--clr-white);
   padding: var(--space-100) 0;
   font-weight: var(--fw-semibold);
+}
+
+.btnSubmit:focus-visible {
+  outline: 2px solid var(--clr-dark-gunmetal);
+  outline-offset: 2px;
+  border-radius: var(--radius-1);
 }

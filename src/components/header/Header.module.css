@@ -28,6 +28,12 @@
   position: relative;
 }
 
+.cartLink:focus-visible {
+  outline: 3px solid var(--clr-white);
+  outline-offset: 3px;
+  border-radius: var(--radius-1);
+}
+
 @media (max-width: 36rem /* 576px */) {
   .cartLink {
     position: absolute;

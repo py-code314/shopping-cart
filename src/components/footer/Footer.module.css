@@ -64,6 +64,12 @@
   gap: var(--space-400);
 }
 
+.footerLink:focus-visible {
+  outline: 2px solid var(--clr-true-blue);
+  outline-offset: 3px;
+  border-radius: var(--radius-1);
+}
+
 .footerSecondary {
   display: flex;
   align-items: center;
