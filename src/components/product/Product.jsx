@@ -72,20 +72,28 @@ const Product = ({ product }) => {
           <button
             className={styles.btnRemove}
             type="button"
+            aria-label="Decrease quantity by one"
+            title="Decrease quantity"
             onClick={handleDecrement}>
             <img
               className={styles.btnIcon}
               src={minusIcon}
               alt=""
-              width={20}
-              height={20}
+              width={32}
+              height={32}
             />
           </button>
+          <label className={styles.visuallyHidden} htmlFor="quantity">
+            Quantity
+          </label>
+           {/* Add max value to make input shrinkable  */}
           <input
             className={styles.quantity}
+            id="quantity"
             type="number"
             name="quantity"
             min={1}
+            max={1000}
             value={quantity}
             onChange={handleNumberChange}
             required
@@ -93,18 +101,19 @@ const Product = ({ product }) => {
           <button
             className={styles.btnAdd}
             type="button"
+            aria-label="Increase quantity by one"
+            title="Increase quantity"
             onClick={handleIncrement}>
             <img
               className={styles.btnIcon}
               src={plusIcon}
               alt=""
-              width={20}
-              height={20}
+              width={32}
+              height={32}
             />
           </button>
         </div>
-        <button className={styles.btnSubmit}
-        type='submit'>
+        <button className={styles.btnSubmit} type="submit">
           Add To Cart
         </button>
       </form>

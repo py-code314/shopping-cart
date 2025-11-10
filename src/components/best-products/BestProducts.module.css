@@ -30,7 +30,6 @@
   flex: 1;
   min-width: var(--min-width-card);
   max-width: var(--max-width-card);
-
   display: grid;
   grid-template-rows: 1fr max-content;
   gap: var(--space-400);
@@ -40,6 +39,7 @@
   text-decoration: none;
   display: grid;
   grid-template-rows: 225px 1fr;
+  pointer-events: none;
 }
 
 .imageWrapper {
