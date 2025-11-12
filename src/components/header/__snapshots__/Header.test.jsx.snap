@@ -17,6 +17,7 @@ exports[`Header component > renders Header with Hero section 1`] = `
         Mock Navbar
       </div>
       <a
+        aria-label="View cart items"
         class="_cartLink_a5ffa8"
         data-discover="true"
         href="/cart"
@@ -58,6 +59,7 @@ exports[`Header component > renders Header without Hero section 1`] = `
         Mock Navbar
       </div>
       <a
+        aria-label="View cart items"
         class="_cartLink_a5ffa8"
         data-discover="true"
         href="/cart"

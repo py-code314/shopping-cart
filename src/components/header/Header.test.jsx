@@ -1,5 +1,5 @@
 
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Header from './Header'
 import { MemoryRouter } from 'react-router'
 
@@ -36,5 +36,32 @@ describe('Header component', () => {
       </MemoryRouter>
     )
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders correct heading', () => {
+    render(
+      <MemoryRouter>
+        <Header isHome={false} cartItems={[]} />
+      </MemoryRouter>
+    )
+    expect(screen.getByRole('heading', {name: 'Anchor'})).toBeInTheDocument()
+  })
+
+  it('links to cart path', () => {
+    render(
+      <MemoryRouter>
+        <Header isHome={false} cartItems={[]} />
+      </MemoryRouter>
+    )
+    expect(screen.getByRole('link', {name: /view cart/i})).toHaveAttribute('href', '/cart')
+  })
+
+  it('should show the correct number of items', () => {
+    render(
+      <MemoryRouter>
+        <Header isHome={false} cartItems={[{ id: 1, quantity: 5 }]} />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('5')).toBeInTheDocument()
   })
 })

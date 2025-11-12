@@ -20,7 +20,8 @@ const Header = ({ isHome, cartItems }) => {
       <div className={styles.headerContent}>
         <h1 className={styles.title}>Anchor</h1>
         <NavBar />
-        <Link to={`/cart`} className={styles.cartLink}>
+        <Link to={`/cart`} className={styles.cartLink}
+        aria-label={`View cart items`}>
           <img src={shoppingBag} alt="" width={25} height={25} />
           <p className={styles.noOfItems}>{totalItems}</p>
         </Link>
