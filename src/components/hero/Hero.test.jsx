@@ -20,6 +20,7 @@ describe('Hero component', () => {
     const searchButton = getByRole('button', {name: /search for products/i})
     expect(searchButton).toBeInTheDocument()
     expect(searchButton).toHaveAttribute('type', 'submit')
+    expect(searchButton).toHaveAttribute('disabled')
   })
 
   

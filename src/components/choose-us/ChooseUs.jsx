@@ -15,10 +15,10 @@ const ChooseUs = () => {
             Discover a curated selection of high-end goods, chosen for their
             uncompromising quality and impeccable craftsmanship.
           </p>
-          <Link className={`${styles.linkMore} ${styles.inactive}`}>
+          <p className={styles.linkMore}>
             More Info
             <img src={rightArrow} alt="" width={30} height={20} />
-          </Link>
+          </p>
         </div>
         <div className={styles.card}>
           <h3 className={styles.subheading}>Affordable Prices</h3>
@@ -26,21 +26,21 @@ const ChooseUs = () => {
             Premium quality should not break the bank. Enjoy the best items at
             prices designed for your budget.
           </p>
-          <Link className={`${styles.linkMore} ${styles.inactive}`}>
+          <p className={styles.linkMore}>
             More Info
             <img src={rightArrow} alt="" width={30} height={20} />
-          </Link>
+          </p>
         </div>
         <div className={styles.card}>
           <h3 className={styles.subheading}>Many Choices</h3>
           <p className={styles.description}>
-            Explore an expansive catalog featuring thousands of items and hundreds
-            of brands. Your perfect find is just a click away.
+            Explore an expansive catalog featuring thousands of items and
+            hundreds of brands. Your perfect find is just a click away.
           </p>
-          <Link className={`${styles.linkMore} ${styles.inactive}`}>
+          <p className={styles.linkMore}>
             More Info
             <img src={rightArrow} alt="" width={30} height={20} />
-          </Link>
+          </p>
         </div>
       </div>
     </section>

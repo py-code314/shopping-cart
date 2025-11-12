@@ -1,0 +1,98 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChooseUs component > renders ChooseUs section 1`] = `
+<DocumentFragment>
+  <section
+    class="_chooseUs_fa0255"
+  >
+    <div
+      class="_headingWrapper_fa0255"
+    >
+      <h2
+        class="_subtitle_fa0255"
+      >
+        Why Choose Us
+      </h2>
+    </div>
+    <div
+      class="_cards_fa0255"
+    >
+      <div
+        class="_card_fa0255"
+      >
+        <h3
+          class="_subheading_fa0255"
+        >
+          Luxury Items
+        </h3>
+        <p
+          class="_description_fa0255"
+        >
+          Discover a curated selection of high-end goods, chosen for their uncompromising quality and impeccable craftsmanship.
+        </p>
+        <p
+          class="_linkMore_fa0255"
+        >
+          More Info
+          <img
+            alt=""
+            height="20"
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3e%3ctitle%3e3-Arrow%20Right%3c/title%3e%3cg%20id='_3-Arrow_Right'%20data-name='3-Arrow%20Right'%3e%3cpath%20fill='%23883E0C'%20d='M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z'/%3e%3c/g%3e%3c/svg%3e"
+            width="30"
+          />
+        </p>
+      </div>
+      <div
+        class="_card_fa0255"
+      >
+        <h3
+          class="_subheading_fa0255"
+        >
+          Affordable Prices
+        </h3>
+        <p
+          class="_description_fa0255"
+        >
+          Premium quality should not break the bank. Enjoy the best items at prices designed for your budget.
+        </p>
+        <p
+          class="_linkMore_fa0255"
+        >
+          More Info
+          <img
+            alt=""
+            height="20"
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3e%3ctitle%3e3-Arrow%20Right%3c/title%3e%3cg%20id='_3-Arrow_Right'%20data-name='3-Arrow%20Right'%3e%3cpath%20fill='%23883E0C'%20d='M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z'/%3e%3c/g%3e%3c/svg%3e"
+            width="30"
+          />
+        </p>
+      </div>
+      <div
+        class="_card_fa0255"
+      >
+        <h3
+          class="_subheading_fa0255"
+        >
+          Many Choices
+        </h3>
+        <p
+          class="_description_fa0255"
+        >
+          Explore an expansive catalog featuring thousands of items and hundreds of brands. Your perfect find is just a click away.
+        </p>
+        <p
+          class="_linkMore_fa0255"
+        >
+          More Info
+          <img
+            alt=""
+            height="20"
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3e%3ctitle%3e3-Arrow%20Right%3c/title%3e%3cg%20id='_3-Arrow_Right'%20data-name='3-Arrow%20Right'%3e%3cpath%20fill='%23883E0C'%20d='M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z'/%3e%3c/g%3e%3c/svg%3e"
+            width="30"
+          />
+        </p>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

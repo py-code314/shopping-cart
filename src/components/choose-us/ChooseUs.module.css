@@ -71,9 +71,9 @@
   text-decoration: none;
   color: var(--clr-saddle-brown);
   font-family: var(--ff-gilroy-medium);
-  padding: var(--space-100);
+  /* padding: var(--space-100); */
 }
 
-.inactive {
+/* .inactive {
   pointer-events: none;
-}
+} */
