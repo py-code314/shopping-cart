@@ -6,7 +6,6 @@ import { useOutletContext } from 'react-router'
 
 const Product = ({ product }) => {
   const [cartItems, setCartItems] = useOutletContext()
-  // const [cartItems, setCartItems] = useState([])
    
 
   const { id, image, category, title, rating, price } = product
