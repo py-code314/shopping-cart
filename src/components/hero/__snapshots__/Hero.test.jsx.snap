@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero component > renders Hero section 1`] = `
+<DocumentFragment>
+  <section
+    class="_hero_3d98f3"
+  >
+    <div
+      class="_contentWrapper_3d98f3"
+    >
+      <h2
+        class="_subtitle_3d98f3"
+      >
+        Make Your Life More Modern & Minimalistic
+      </h2>
+      <p
+        class="_description_3d98f3"
+      >
+        Everything you want, all in one seamless shopping experience.
+      </p>
+      <form
+        action=""
+        class="_form_3d98f3"
+      >
+        <label
+          class="_visuallyHidden_3d98f3"
+          for="search"
+        >
+          Search for products
+        </label>
+        <input
+          class="_search_3d98f3"
+          id="search"
+          name="search"
+          placeholder="Search for products..."
+          type="search"
+        />
+        <button
+          aria-label="Search for products"
+          class="_btnSearch_3d98f3"
+          disabled=""
+          title="Search"
+          type="submit"
+        >
+          <img
+            alt=""
+            height="40"
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3e%3ctitle%3esearch%20android%20app%20aplication%20phone%3c/title%3e%3cg%20id='search_android_app_aplication_phone'%20data-name='search%20android%20app%20aplication%20phone'%3e%3cpath%20fill='%23883E0C'%20d='M16,31A15,15,0,1,1,31,16,15,15,0,0,1,16,31ZM16,3A13,13,0,1,0,29,16,13,13,0,0,0,16,3Z'/%3e%3cpath%20fill='%23fff'%20d='M14,21a7,7,0,1,1,7-7A7,7,0,0,1,14,21ZM14,9a5,5,0,1,0,5,5A5,5,0,0,0,14,9Z'/%3e%3cpath%20fill='%23fff'%20d='M22.29,23.71l-3-3a1,1,0,0,1,1.42-1.42l3,3a1,1,0,0,1-1.42,1.42Z'/%3e%3c/g%3e%3c/svg%3e"
+            width="40"
+          />
+        </button>
+      </form>
+    </div>
+  </section>
+</DocumentFragment>
+`;

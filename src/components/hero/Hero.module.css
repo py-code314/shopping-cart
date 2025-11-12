@@ -80,6 +80,11 @@
   outline: 3px solid var(--clr-white);
 }
 
+.btnSearch:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 .form {
   position: relative;
 }

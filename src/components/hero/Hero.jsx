@@ -13,7 +13,7 @@ const Hero = () => {
           <label className={styles.visuallyHidden} htmlFor="search">Search for products</label>
           <input className={styles.search} type="search" name='search' id='search' placeholder='Search for products...' />
           <button className={styles.btnSearch} type='submit' aria-label='Search for products'
-          title='Search'>
+          title='Search' disabled>
             <img src={searchIcon} alt="" width={40} height={40}  />
           </button>
         </form>
