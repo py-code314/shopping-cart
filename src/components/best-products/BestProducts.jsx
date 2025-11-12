@@ -5,6 +5,7 @@ import rightArrow from '../../assets/images/arrow-right-icon.svg'
 import { useData } from '../../hooks/useData'
 
 const BestProducts = () => {
+  
   const { data, isLoading, error } = useData(
     'https://fakestoreapi.com/products'
   )
@@ -23,7 +24,7 @@ const BestProducts = () => {
   )
   // console.log(bestProducts)
   // console.log(data)
-  // TODO: Implement star rating
+
 
   return (
     <section className={styles.bestProducts}>
@@ -32,7 +33,7 @@ const BestProducts = () => {
         {bestProducts &&
           bestProducts.map((product) => (
             <li className={styles.product} key={product.id}>
-              <Link className={styles.card}>
+              <div className={styles.card}>
                 <div className={styles.imageWrapper}>
                   <img className={styles.image} src={product.image} alt="" />
                 </div>
@@ -44,7 +45,7 @@ const BestProducts = () => {
                     <span className={styles.rate}>{product.rating.rate}</span>
                   </p>
                 </div>
-              </Link>
+              </div>
               <div className={styles.buyWrapper}>
                 <p className={styles.price}>
                   <span className={styles.dollar}>$</span>
