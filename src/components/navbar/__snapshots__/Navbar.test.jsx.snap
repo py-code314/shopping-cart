@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar component > renders Navbar 1`] = `
+<DocumentFragment>
+  <nav
+    class="_navbar_4b0a09"
+  >
+    <ul
+      class="_navbarList_4b0a09"
+    >
+      <li
+        class="_navItem_4b0a09"
+      >
+        <a
+          class="_navbarLink_4b0a09 "
+          data-discover="true"
+          href="/home"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="_navItem_4b0a09"
+      >
+        <a
+          class="_navbarLink_4b0a09 "
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li
+        class="_navItem_4b0a09"
+      >
+        About
+      </li>
+      <li
+        class="_navItem_4b0a09"
+      >
+        Contact
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
