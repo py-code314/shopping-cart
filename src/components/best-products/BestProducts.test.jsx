@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import BestProducts from './BestProducts'
 import { MemoryRouter } from 'react-router'
+import { useData } from '../../hooks/useData'
 
 const mockProducts = [
   {
@@ -84,5 +85,21 @@ describe('BestProducts component', () => {
     buttons.forEach((button) => {
       expect(button).toHaveAttribute('type', 'button')
     })
+  })
+
+  it('should display error message if it fails to fetch the data', () => {
+    vi.mocked(useData).mockReturnValueOnce({
+      data: null,
+      isLoading: false,
+      error: 'Error fetching the data'
+    })
+
+    render(
+      <MemoryRouter>
+        <BestProducts />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByText('Error fetching the data')).toBeInTheDocument()
   })
 })
