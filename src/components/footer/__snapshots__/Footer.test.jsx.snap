@@ -1,0 +1,238 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer component > renders Footer 1`] = `
+<DocumentFragment>
+  <footer
+    class="_footer_91da1a"
+  >
+    <div
+      class="_contentWrapper_91da1a"
+    >
+      <div
+        class="_footerPrimary_91da1a"
+      >
+        <div
+          class="_about_91da1a _card_91da1a"
+        >
+          <h2
+            class="_subtitle_91da1a"
+          >
+            Anchor
+          </h2>
+          <p
+            class="_description_91da1a"
+          >
+            The full-scale department store experience, now just a click away. Shop top brands in fashion, home, and beauty.
+          </p>
+        </div>
+        <div
+          class="_card_91da1a"
+        >
+          <h3
+            class="_subheading_91da1a"
+          >
+            Customer Service
+          </h3>
+          <ul
+            class="_footerListPrimary_91da1a"
+          >
+            <li>
+              <span
+                class="_footerLink_91da1a"
+              >
+                FAQ and Help
+              </span>
+            </li>
+            <li>
+              <span
+                class="_footerLink_91da1a"
+              >
+                Order Lookup
+              </span>
+            </li>
+            <li>
+              <span
+                class="_footerLink_91da1a"
+              >
+                Returns
+              </span>
+            </li>
+            <li>
+              <span
+                class="_footerLink_91da1a"
+              >
+                Shipping & Delivery
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="_card_91da1a"
+        >
+          <h3
+            class="_subheading_91da1a"
+          >
+            Stores & Services
+          </h3>
+          <ul
+            class="_footerListPrimary_91da1a"
+          >
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <span
+                class="_footerLink_91da1a"
+              >
+                Curbside & In Store Pickup
+              </span>
+            </li>
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <span
+                class="_footerLink_91da1a"
+              >
+                Locations & Hours
+              </span>
+            </li>
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <span
+                class="_footerLink_91da1a"
+              >
+                Store Events
+              </span>
+            </li>
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <span
+                class="_footerLink_91da1a"
+              >
+                Gift Registry
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="_card_91da1a"
+        >
+          <h3
+            class="_subheading_91da1a"
+          >
+            Follow Us
+          </h3>
+          <ul
+            class="_footerListPrimary_91da1a"
+          >
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <a
+                class="_footerLink_91da1a"
+                href="https://www.facebook.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%20id='Facebook-Logo-2--Streamline-Logos'%20height='24'%20width='24'%3e%3cdesc%3e%20Facebook%20Logo%202%20Streamline%20Icon:%20https://streamlinehq.com%20%3c/desc%3e%3cpath%20fill='%231E1E1E'%20d='M13.5%201A4.5%204.5%200%200%200%209%205.5V9H6.5a0.5%200.5%200%200%200%20-0.5%200.5v4a0.5%200.5%200%200%200%200.5%200.5H9v8.5a0.5%200.5%200%200%200%200.5%200.5h4a0.5%200.5%200%200%200%200.5%20-0.5V14h2.5a0.5%200.5%200%200%200%200.485%20-0.379l1%20-4A0.5%200.5%200%200%200%2017.5%209H14V7.5A1.5%201.5%200%200%201%2015.5%206h2a0.5%200.5%200%200%200%200.5%20-0.5v-4a0.5%200.5%200%200%200%20-0.5%20-0.5h-4Z'%20stroke-width='1'%3e%3c/path%3e%3c/svg%3e"
+                />
+                <p>
+                  Facebook
+                </p>
+              </a>
+            </li>
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <a
+                class="_footerLink_91da1a"
+                href="https://mastodon.social/explore"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%20id='Mastodon-Logo-3--Streamline-Logos'%20height='24'%20width='24'%3e%3cdesc%3e%20Mastodon%20Logo%203%20Streamline%20Icon:%20https://streamlinehq.com%20%3c/desc%3e%3cpath%20fill='%231E1E1E'%20fill-rule='evenodd'%20d='M10.5%2023C6.146%2023%201%2022.42%201%2010.5%201%200.994%206.272%200.997%2011.239%201l0.261%200c4.27%200%207.347%200.173%208.97%202.82a4.738%204.738%200%200%200%20-1.72%20-0.32%204.731%204.731%200%200%200%20-2.75%200.877A4.75%204.75%200%200%200%208.5%208.25v5.25a1%201%200%200%200%201%201h2a1%201%200%200%200%201%20-1V8.25a0.75%200.75%200%200%201%201.5%200V11a1%201%200%200%200%201%201h2a1%201%200%200%200%201%20-1V8.25a0.75%200.75%200%200%201%201.5%200v5.25a1%201%200%200%200%201%201h0.436c-1.861%203.566%20-6.33%203.564%20-8.786%203.562l-0.126%200c-1.273%200%20-2.532%20-0.207%20-3.52%20-0.37C7.867%2017.587%207.342%2017.5%207%2017.5c0%203.29%204.31%203.505%208.5%202.5v2c-0.15%200.062%20-0.288%200.134%20-0.433%200.21%20-0.671%200.35%20-1.513%200.79%20-4.567%200.79Zm-3%20-17a1.5%201.5%200%201%201%20-3%200%201.5%201.5%200%200%201%203%200Zm4%202.25a1.75%201.75%200%201%201%203.5%200V11h2V8.25a1.75%201.75%200%201%201%203.5%200v5.25h2V8.25A3.75%203.75%200%200%200%2016%205.7a3.75%203.75%200%200%200%20-6.5%202.55v5.25h2V8.25Z'%20clip-rule='evenodd'%20stroke-width='1'%3e%3c/path%3e%3c/svg%3e"
+                />
+                <p>
+                  Mastodon
+                </p>
+              </a>
+            </li>
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <a
+                class="_footerLink_91da1a"
+                href="https://instagram.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%20id='Instagram-Logo-1--Streamline-Logos'%20height='24'%20width='24'%3e%3cdesc%3e%20Instagram%20Logo%201%20Streamline%20Icon:%20https://streamlinehq.com%20%3c/desc%3e%3cpath%20fill='%231E1E1E'%20fill-rule='evenodd'%20d='M8.75%201h-1.5v6.75h0.313c0.36%20-0.336%200.758%20-0.632%201.187%20-0.88V1Zm7.687%206.75A6.477%206.477%200%200%200%2012%206a6.52%206.52%200%200%200%20-1.75%200.238V1H20a3%203%200%200%201%203%203v3.75h-6.563Zm-1.325%201.5a4.5%204.5%200%201%201%20-6.225%206.5%204.5%204.5%200%200%201%206.226%20-6.5Zm-8.742%200a6.5%206.5%200%201%200%2011.26%200H23V20a3%203%200%200%201%20-3%203H4a3%203%200%200%201%20-3%20-3V9.25h5.37ZM5.75%201v6.75h-1.5V1h1.5Zm-3%200.272V7.75H1V4a3%203%200%200%201%201.75%20-2.728ZM17%203.5a0.5%200.5%200%200%201%200.5%20-0.5h2a0.5%200.5%200%200%201%200.5%200.5v2a0.5%200.5%200%200%201%20-0.5%200.5h-2a0.5%200.5%200%200%201%20-0.5%20-0.5v-2Z'%20clip-rule='evenodd'%20stroke-width='1'%3e%3c/path%3e%3c/svg%3e"
+                />
+                <p>
+                  Instagram
+                </p>
+              </a>
+            </li>
+            <li
+              class="_footerListItem_91da1a"
+            >
+              <a
+                class="_footerLink_91da1a"
+                href="https://pinterest.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%20id='Pinterest-Logo--Streamline-Logos'%20height='24'%20width='24'%3e%3cdesc%3e%20Pinterest%20Logo%20Streamline%20Icon:%20https://streamlinehq.com%20%3c/desc%3e%3cpath%20fill='%231E1E1E'%20fill-rule='evenodd'%20d='M3.421%208.447C3.797%204.73%207.19%201%2012%201c3.328%200%205.656%201.261%207.045%203.181%201.34%201.853%201.67%204.13%201.444%205.999%20-0.196%201.625%20-0.71%203.529%20-1.753%205.025%20-1.09%201.562%20-2.815%202.726%20-5.203%202.487%20-1.203%20-0.12%20-2.096%20-0.587%20-2.75%20-1.189a357.53%20357.53%200%200%201%20-0.702%202.044%20181.31%20181.31%200%200%200%20-1.153%203.412%201.5%201.5%200%200%201%20-2.856%20-0.918c0.33%20-1.024%200.745%20-2.23%201.175%20-3.475l0.203%20-0.591a153.234%20153.234%200%200%200%201.491%20-4.495c-0.07%20-0.146%20-0.149%20-0.312%20-0.228%20-0.49a9.822%209.822%200%200%201%20-0.379%20-0.99c-0.102%20-0.325%20-0.215%20-0.764%20-0.215%20-1.207%200%20-0.904%200.21%20-1.802%200.793%20-2.468a2.451%202.451%200%200%201%202.41%20-0.79c1.18%200.26%201.415%201.373%201.463%201.75%200.062%200.49%200.006%201.037%20-0.074%201.532%20-0.123%200.764%20-0.358%201.694%20-0.647%202.69a3.68%203.68%200%200%200%200.26%201.06c0.247%200.585%200.644%201.054%201.507%201.14%201.076%200.108%201.83%20-0.339%202.444%20-1.218%200.66%20-0.946%201.072%20-2.315%201.236%20-3.669%200.157%20-1.305%20-0.098%20-2.777%20-0.897%20-3.88C15.864%204.902%2014.5%204%2012%204%208.811%204%206.635%206.48%206.406%208.749c-0.158%201.563%200.192%202.655%200.54%203.163a1.5%201.5%200%201%201%20-2.477%201.694c-0.847%20-1.238%20-1.257%20-3.09%20-1.048%20-5.159Z'%20clip-rule='evenodd'%20stroke-width='1'%3e%3c/path%3e%3c/svg%3e"
+                />
+                <p>
+                  Pinterest
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="_footerSecondary_91da1a"
+      >
+        <p
+          class="_copyright_91da1a"
+        >
+          Copyright © 2025
+        </p>
+        <ul
+          class="_footerListSecondary_91da1a"
+        >
+          <li
+            class="_footerListItem_91da1a"
+          >
+            <span
+              class="_footerLink_91da1a"
+            >
+              Terms & Conditions
+            </span>
+          </li>
+          <li
+            class="_footerListItem_91da1a"
+          >
+            <span
+              class="_footerLink_91da1a"
+            >
+              Privacy Policy
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
