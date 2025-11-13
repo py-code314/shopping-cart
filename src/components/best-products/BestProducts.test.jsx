@@ -132,4 +132,16 @@ describe('BestProducts component', () => {
 
     expect(mockSetCartItems).toHaveBeenCalledTimes(1)
   })
+
+  it('links to shop path', () => {
+    render(
+      <MemoryRouter>
+        <BestProducts />
+      </MemoryRouter>
+    )
+    expect(screen.getByRole('link', { name: /view all/i })).toHaveAttribute(
+      'href',
+      '/shop'
+    )
+  })
 })
