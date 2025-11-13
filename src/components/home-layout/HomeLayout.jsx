@@ -1,4 +1,4 @@
-import { Outlet, useOutletContext } from 'react-router'
+import { Outlet, useOutletContext } from 'react-router-dom'
 import Header from '../header/Header'
 
 const HomeLayout = () => {

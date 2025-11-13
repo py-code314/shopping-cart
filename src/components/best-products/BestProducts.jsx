@@ -1,11 +1,15 @@
 import styles from './BestProducts.module.css'
-import { Link } from 'react-router'
+
 import plusIcon from '../../assets/images/plus-icon.svg'
 import rightArrow from '../../assets/images/arrow-right-icon.svg'
 import { useData } from '../../hooks/useData'
 
+import { Link, useOutletContext } from 'react-router-dom'
+
 const BestProducts = () => {
-  
+  // eslint-disable-next-line no-unused-vars
+  const [cartItems, setCartItems] = useOutletContext()
+
   const { data, isLoading, error } = useData(
     'https://fakestoreapi.com/products'
   )
@@ -25,6 +29,38 @@ const BestProducts = () => {
   // console.log(bestProducts)
   // console.log(data)
 
+  const handleSubmit = (id, image, title, price, quantity) => {
+    // console.log('submit clicked')
+    // e.preventDefault()
+
+    setCartItems((prevCartItems) => {
+      const existingItemIndex = prevCartItems.findIndex(
+        (item) => item.id === id
+      )
+      // console.log(existingItemIndex)
+
+      if (existingItemIndex > -1) {
+        const updatedCartItems = [...prevCartItems]
+        updatedCartItems[existingItemIndex] = {
+          ...updatedCartItems[existingItemIndex],
+          quantity: updatedCartItems[existingItemIndex].quantity + quantity,
+        }
+        return updatedCartItems
+      } else {
+        // console.log('add new item')
+        return [
+          ...prevCartItems,
+          {
+            id: id,
+            image: image,
+            title: title,
+            price: price,
+            quantity: quantity,
+          },
+        ]
+      }
+    })
+  }
 
   return (
     <section className={styles.bestProducts}>
@@ -55,7 +91,16 @@ const BestProducts = () => {
                   className={styles.btnAdd}
                   type="button"
                   aria-label="Add to cart"
-                  title="Add To Cart">
+                  title="Add To Cart"
+                  onClick={() =>
+                    handleSubmit(
+                      product.id,
+                      product.image,
+                      product.title,
+                      product.price,
+                      1
+                    )
+                  }>
                   <img
                     className={styles.btnIcon}
                     src={plusIcon}

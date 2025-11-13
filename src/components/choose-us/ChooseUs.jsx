@@ -1,6 +1,6 @@
 import styles from './ChooseUs.module.css'
 import rightArrow from '../../assets/images/arrow-right-icon.svg'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 
 const ChooseUs = () => {
   return (

@@ -3,7 +3,7 @@ import facebookIcon from '../../assets/images/facebook.svg'
 import instagramIcon from '../../assets/images/instagram.svg'
 import mastodonIcon from '../../assets/images/mastodon.svg'
 import pinterestIcon from '../../assets/images/pinterest.svg'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 
 const Footer = () => {
   return (

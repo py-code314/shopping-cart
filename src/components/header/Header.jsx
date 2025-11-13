@@ -1,5 +1,5 @@
 import styles from './Header.module.css'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import shoppingBag from '../../assets/images/shopping-bag.svg'
 import NavBar from '../navbar/Navbar'
 import Hero from '../hero/Hero'

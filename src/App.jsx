@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router'
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import { useState } from 'react'
 import Footer from './components/footer/Footer'

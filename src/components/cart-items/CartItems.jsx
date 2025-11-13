@@ -1,7 +1,7 @@
 import styles from './CartItems.module.css'
 import minusIcon from '../../assets/images/minus-icon-black.svg'
 import plusIcon from '../../assets/images/plus-icon-black.svg'
-import { useOutletContext } from 'react-router'
+import { useOutletContext } from 'react-router-dom'
 // import { useState } from 'react'
 
 const CartItems = ({ items }) => {

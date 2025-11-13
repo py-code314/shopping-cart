@@ -1,5 +1,5 @@
 import Header from '../header/Header'
-import { Outlet, useOutletContext } from 'react-router'
+import { Outlet, useOutletContext } from 'react-router-dom'
 
 const DefaultLayout = () => {
   const [cartItems, setCartItems] = useOutletContext()

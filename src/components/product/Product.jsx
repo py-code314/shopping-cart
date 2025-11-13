@@ -2,7 +2,7 @@ import styles from './Product.module.css'
 import minusIcon from '../../assets/images/minus-icon.svg'
 import plusIcon from '../../assets/images/plus-icon.svg'
 import { useState } from 'react'
-import { useOutletContext } from 'react-router'
+import { useOutletContext } from 'react-router-dom'
 
 const Product = ({ product }) => {
   const [cartItems, setCartItems] = useOutletContext()
@@ -26,7 +26,7 @@ const Product = ({ product }) => {
     setQuantity((prevQuantity) => prevQuantity + 1)
   }
 
-  const handleSubmit = (e, id, title, price, quantity) => {
+  const handleSubmit = (e, id, image, title, price, quantity) => {
     // console.log('submit clicked')
     e.preventDefault()
 
@@ -66,7 +66,7 @@ const Product = ({ product }) => {
       </div>
       <form
         className={styles.buyWrapper}
-        onSubmit={(e) => handleSubmit(e, id, title, price, quantity)}>
+        onSubmit={(e) => handleSubmit(e, id, image, title, price, quantity)}>
         <div className={styles.inputWrapper}>
           <button
             className={styles.btnRemove}

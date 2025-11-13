@@ -1,6 +1,6 @@
-import { useOutletContext } from 'react-router'
+import { Link, useOutletContext } from 'react-router-dom'
 import styles from './Cart.module.css'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 import CartItems from '../cart-items/CartItems'
 
 const Cart = () => {

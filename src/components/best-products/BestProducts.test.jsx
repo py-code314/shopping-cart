@@ -1,7 +1,18 @@
 import { render, screen } from '@testing-library/react'
 import BestProducts from './BestProducts'
-import { MemoryRouter } from 'react-router'
+import { MemoryRouter} from 'react-router-dom'
 import { useData } from '../../hooks/useData'
+import userEvent from '@testing-library/user-event'
+import * as router from 'react-router-dom'
+
+const mockSetCartItems = vi.fn()
+vi.mock('react-router-dom', async () => {
+  const actual = await vi.importActual('react-router-dom')
+  return {
+    ...actual,
+    useOutletContext: vi.fn(() => [[], mockSetCartItems]),
+  }
+})
 
 const mockProducts = [
   {
@@ -101,5 +112,24 @@ describe('BestProducts component', () => {
     )
 
     expect(screen.getByText('Error fetching the data')).toBeInTheDocument()
+  })
+
+  it('calls setCartItems function with button click', async () => {
+    router.useOutletContext.mockReturnValueOnce([[], mockSetCartItems])
+    mockSetCartItems.mockClear()
+
+    const user = userEvent.setup()
+
+    render(
+      <MemoryRouter>
+        <BestProducts />
+      </MemoryRouter>
+    )
+
+    const buttons = screen.getAllByRole('button', { name: /add to cart/i })
+    
+    await user.click(buttons[0])
+
+    expect(mockSetCartItems).toHaveBeenCalledTimes(1)
   })
 })
