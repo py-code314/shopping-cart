@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop component > renders Shop component 1`] = `
+<DocumentFragment>
+  <section
+    class="_shop_83fc2a"
+  >
+    <div
+      class="_subtitleWrapper_83fc2a"
+    >
+      <div
+        class="_decor_83fc2a"
+      />
+      <h2
+        class="_subtitle_83fc2a"
+      >
+        Explore Our Products
+      </h2>
+    </div>
+    <ul
+      class="_productList_83fc2a"
+    >
+      <li
+        class="_product_83fc2a"
+      >
+        <div
+          data-testid="mock-product"
+        >
+          Mock Product
+        </div>
+      </li>
+      <li
+        class="_product_83fc2a"
+      >
+        <div
+          data-testid="mock-product"
+        >
+          Mock Product
+        </div>
+      </li>
+      <li
+        class="_product_83fc2a"
+      >
+        <div
+          data-testid="mock-product"
+        >
+          Mock Product
+        </div>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
