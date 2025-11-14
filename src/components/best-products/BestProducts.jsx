@@ -2,6 +2,7 @@ import styles from './BestProducts.module.css'
 
 import plusIcon from '../../assets/images/plus-icon.svg'
 import rightArrow from '../../assets/images/arrow-right-icon.svg'
+import brokenLink from '../../assets/images/broken-link.svg'
 import { useData } from '../../hooks/useData'
 
 import { Link, useOutletContext } from 'react-router-dom'
@@ -20,9 +21,21 @@ const BestProducts = () => {
         <div className={styles.loader}></div>
       </div>
     )
-  if (error) return <div>{error}</div>
-
-  
+  if (error)
+    return (
+      <div className={styles.errorWrapper}>
+        <div className={styles.errorImage}>
+          <img src={brokenLink} alt="" width={70} height={70} />
+        </div>
+        <div className={styles.errorContent}>
+          <p>Something went wrong.</p>
+          <p>Please try again.</p>
+          <Link className={styles.linkRetry} to={'/home'}>
+            Retry
+          </Link>
+        </div>
+      </div>
+    )
 
   const bestProducts = data.filter(
     (product) =>

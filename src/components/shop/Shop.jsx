@@ -1,6 +1,8 @@
 import styles from './Shop.module.css'
 import { useData } from '../../hooks/useData'
-import  Product  from "../product/Product";
+import Product from "../product/Product";
+import brokenLink from '../../assets/images/broken-link.svg'
+import { Link } from 'react-router-dom';
 
 
 const Shop = () => {
@@ -8,7 +10,7 @@ const Shop = () => {
     data: products,
     isLoading,
     error,
-  } = useData('https://fakestoreapi.com/products')
+  } = useData('https://fakestoreapi.com/produts')
 
   if (isLoading)
       return (
@@ -16,7 +18,20 @@ const Shop = () => {
           <div className={styles.loader}></div>
         </div>
       )
-  if (error) return <div>{error}</div>
+  if (error) return (
+    <div className={styles.errorWrapper}>
+      <div className={styles.errorImage}>
+        <img src={brokenLink} alt="" width={70} height={70} />
+      </div>
+      <div className={styles.errorContent}>
+        <p>Something went wrong.</p>
+        <p>Please try again.</p>
+        <Link className={styles.linkRetry} to={'/shop'}>
+          Retry
+        </Link>
+      </div>
+    </div>
+  )
 
   return (
     <section className={styles.shop}>

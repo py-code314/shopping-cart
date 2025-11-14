@@ -24,7 +24,7 @@ export const useData = (url) => {
           console.log('Aborted')
           return
         }
-
+        // console.log(err.message)
         setError(err.message)
         setData(null)
       } finally {
