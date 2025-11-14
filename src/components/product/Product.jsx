@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 
 const Product = ({ product }) => {
+  // eslint-disable-next-line no-unused-vars
   const [cartItems, setCartItems] = useOutletContext()
    
 
