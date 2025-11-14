@@ -10,6 +10,7 @@
   font-family: var(--ff-gilroy-bold);
 }
 
+.navbarLink:hover,
 .navbarLink:focus-visible {
   outline: 3px solid var(--clr-white);
   outline-offset: 1px;

@@ -3,10 +3,13 @@
   font-family: var(--ff-inter);
   display: grid;
   grid-template-rows: 260px 1fr max-content;
+ box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  padding-block-end: var(--space-100);
+  border-radius: var(--radius-2);
 }
 
 .imageWrapper {
-  border-radius: var(--radius-2);
+  border-radius: var(--radius-2) var(--radius-2) 0 0;
   background-color: var(--clr-lotion);
   padding: var(--space-200);
 }

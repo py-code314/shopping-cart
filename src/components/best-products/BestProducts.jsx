@@ -14,10 +14,15 @@ const BestProducts = () => {
     'https://fakestoreapi.com/products'
   )
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading)
+    return (
+      <div className={styles.loaderWrapper}>
+        <div className={styles.loader}></div>
+      </div>
+    )
   if (error) return <div>{error}</div>
 
-  //TODO: Style error message
+  
 
   const bestProducts = data.filter(
     (product) =>

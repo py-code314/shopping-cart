@@ -28,6 +28,7 @@
   position: relative;
 }
 
+.cartLink:hover,
 .cartLink:focus-visible {
   outline: 3px solid var(--clr-white);
   outline-offset: 3px;

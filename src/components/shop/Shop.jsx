@@ -10,7 +10,12 @@ const Shop = () => {
     error,
   } = useData('https://fakestoreapi.com/products')
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading)
+      return (
+        <div className={styles.loaderWrapper}>
+          <div className={styles.loader}></div>
+        </div>
+      )
   if (error) return <div>{error}</div>
 
   return (
