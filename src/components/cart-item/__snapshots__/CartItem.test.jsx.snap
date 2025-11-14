@@ -1,0 +1,121 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartItem component > renders CartItem 1`] = `
+<DocumentFragment>
+  <table
+    class="_table_ec1528"
+  >
+    <thead
+      class="_tableHead_ec1528"
+    >
+      <tr
+        class="_tableRow_ec1528"
+      >
+        <th
+          class="_tableHeading_ec1528 _product_ec1528"
+        >
+          Product
+        </th>
+        <th
+          class="_tableHeading_ec1528 _price_ec1528"
+        >
+          Price
+        </th>
+        <th
+          class="_tableHeading_ec1528 _noOfItems_ec1528"
+        >
+          Quantity
+        </th>
+        <th
+          class="_tableHeading_ec1528 _subTotal_ec1528"
+        >
+          Subtotal
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="_tableBody_ec1528"
+    >
+      <tr
+        class="_tableRow_ec1528 _cartItem_ec1528"
+      >
+        <td
+          class="_tableCell_ec1528 _imageTitle_ec1528"
+        >
+          <img
+            alt=""
+            class="_image_ec1528"
+            src="jacket.jpg"
+            width="40"
+          />
+          <p
+            class="_title_ec1528"
+          >
+            Jacket
+          </p>
+        </td>
+        <td
+          class="_tableCell_ec1528 _price_ec1528"
+        >
+          $49.99
+        </td>
+        <td
+          class="_tableCell_ec1528 _noOfItems_ec1528"
+        >
+          <div
+            class="_inputWrapper_ec1528"
+          >
+            <button
+              aria-label="Decrease quantity by one"
+              class="_btnQuantity_ec1528"
+              title="Decrease quantity"
+              type="button"
+            >
+              <img
+                alt=""
+                class="_btnIcon_ec1528"
+                height="32"
+                src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2019.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%20128%20128'%20style='enable-background:new%200%200%20128%20128;'%20xml:space='preserve'%3e%3cg%20id='_x32_'%3e%3cpath%20style='fill:%23303030;%20stroke:%23303030;%20stroke-width:5;'%20d='M125.61,71.238H2.39c-1.32,0-2.39-1.07-2.39-2.39v-9.787c0-1.32,1.07-2.39,2.39-2.39h123.22%20c1.32,0,2.39,1.07,2.39,2.39v9.787C128,70.168,126.93,71.238,125.61,71.238z'/%3e%3c/g%3e%3cg%20id='Layer_1'%3e%3c/g%3e%3c/svg%3e"
+                width="32"
+              />
+            </button>
+            <label
+              class="_visuallyHidden_ec1528"
+              for="1"
+            >
+              Quantity
+            </label>
+            <input
+              class="_quantity_ec1528"
+              id="1"
+              min="0"
+              name="quantity"
+              type="number"
+              value="1"
+            />
+            <button
+              aria-label="Increase quantity by one"
+              class="_btnQuantity_ec1528"
+              title="Increase quantity"
+              type="button"
+            >
+              <img
+                alt=""
+                class="_btnIcon_ec1528"
+                height="32"
+                src="data:image/svg+xml,%3csvg%20id='Layer_1'%20data-name='Layer%201'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill-rule:evenodd;}%3c/style%3e%3c/defs%3e%3ctitle%3eTrade_Icons%3c/title%3e%3cpath%20style='fill:%23303030;%20stroke:%23303030;%20stroke-width:2;'%20class='cls-1'%20d='M.5,8.5v-1h15v1Z'/%3e%3cpath%20style='fill:%23303030;%20stroke:%23303030;%20stroke-width:2;'%20class='cls-1'%20d='M8.5,15.5h-1V.5h1Z'/%3e%3c/svg%3e"
+                width="32"
+              />
+            </button>
+          </div>
+        </td>
+        <td
+          class="_tableCell_ec1528 _subTotal_ec1528"
+        >
+          $49.99
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
