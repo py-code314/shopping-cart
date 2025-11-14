@@ -1,7 +1,7 @@
 import { Link, useOutletContext } from 'react-router-dom'
 import styles from './Cart.module.css'
 // import { Link } from 'react-router'
-import CartItems from '../cart-items/CartItems'
+import CartItem from '../cart-item/CartItem'
 
 const Cart = () => {
   const [cartItems, setCartItems] = useOutletContext()
@@ -19,7 +19,7 @@ const Cart = () => {
         <div className={styles.decor}></div>
         <h2 className={styles.subtitle}>Cart</h2>
       </div>
-      {length > 0 ? <CartItems items={cartItems} /> : <p className={styles.emptyBag}>Your bag is currently empty.</p>}
+      {length > 0 ? <CartItem items={cartItems} /> : <p className={styles.emptyBag}>Your bag is currently empty.</p>}
       <div className={styles.actionGroup}>
         <Link className={styles.linkShop} to={'/shop'}>
           Return To Shop
@@ -60,7 +60,7 @@ const Cart = () => {
               <span className={`${styles.value} ${styles.estTotal}`}>${subTotal.toFixed(2)}</span>
             </li>
           </ul>
-          <Link className={styles.linkCheckout}>Proceed To Checkout</Link>
+          <p className={styles.linkCheckout}>Proceed To Checkout</p>
         </div>
       </div>
     </div>
