@@ -1,6 +1,7 @@
 import styles from './CartItem.module.css'
 import minusIcon from '../../assets/images/minus-icon-black.svg'
 import plusIcon from '../../assets/images/plus-icon-black.svg'
+import deleteIcon from '../../assets/images/delete-icon.svg'
 import { useOutletContext } from 'react-router-dom'
 // import { useState } from 'react'
 
@@ -71,6 +72,7 @@ const CartItem = ({ items }) => {
       <thead className={styles.tableHead}>
         <tr className={styles.tableRow}>
           <th className={`${styles.tableHeading} ${styles.product}`}>
+            <div className={styles.emptyDiv}></div>
             Product
           </th>
           <th className={`${styles.tableHeading} ${styles.price}`}>Price</th>
@@ -85,14 +87,25 @@ const CartItem = ({ items }) => {
       <tbody className={styles.tableBody}>
         {items.map((item) => (
           <tr className={`${styles.tableRow} ${styles.cartItem}`} key={item.id}>
-            <td className={`${styles.tableCell} ${styles.imageTitle}`}>
-              <img
-                className={styles.image}
-                src={item.image}
-                alt=''
-                width={40}
-              />
-              <p className={styles.title}>{item.title}</p>
+            <td className={`${styles.tableCell} ${styles.product}`}>
+              <button className={styles.deleteBtn}>
+                <img
+                  className={styles.deleteIcon}
+                  src={deleteIcon}
+                  alt=""
+                  width={32}
+                  height={32}
+                />
+              </button>
+              <div className={styles.imageTitleWrapper}>
+                <img
+                  className={styles.image}
+                  src={item.image}
+                  alt=""
+                  width={50}
+                />
+                <p className={styles.title}>{item.title}</p>
+              </div>
             </td>
 
             <td className={`${styles.tableCell} ${styles.price}`}>
