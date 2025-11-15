@@ -1,14 +1,14 @@
 
 
 /* ? How to apply background image without stretching it */
-.backgroundWrapper {
+/* .backgroundWrapper {
   background: var(--clr-arsenic) url('./assets/images/living-room.jpeg');
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   height: var(--height-hero);
-}
+} */
 
-.backgroundColor {
+/* .backgroundColor {
   background-color: var(--clr-arsenic);
-}
+} */

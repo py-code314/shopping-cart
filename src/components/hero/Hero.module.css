@@ -29,6 +29,13 @@
   font-size: var(--fs-500);
 }
 
+@media (max-width: 36rem /* 576px */) {
+  .description {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-4);
+  }
+}
+
 .search {
   padding: var(--space-150) var(--space-150) var(--space-150) var(--fs-600);
   border-radius: var(--radius-3);
@@ -87,4 +94,11 @@
 
 .form {
   position: relative;
+}
+
+@media (max-width: 36rem /* 576px */) {
+  .form {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius-3);
+  }
 }
