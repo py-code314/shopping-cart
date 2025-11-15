@@ -153,7 +153,7 @@ exports[`BestProducts component > renders BestProducts 1`] = `
       </li>
     </ul>
     <a
-      class="_linkMore_d9fb3b"
+      class="_linkAll_d9fb3b"
       data-discover="true"
       href="/shop"
     >

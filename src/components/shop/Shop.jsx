@@ -10,7 +10,7 @@ const Shop = () => {
     data: products,
     isLoading,
     error,
-  } = useData('https://fakestoreapi.com/produts')
+  } = useData('https://fakestoreapi.com/products')
 
   if (isLoading)
       return (

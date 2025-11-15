@@ -29,13 +29,13 @@ const Cart = () => {
           </button>
         </div>
         <div className={styles.cartSummary}>
-          <div className={styles.inputWrapper}>
+          <form className={styles.inputWrapper}>
             <label className={styles.visuallyHidden} htmlFor="coupon">Coupon code</label>
             <input type="text" className={styles.coupon} name="coupon" id='coupon' />
-            <button type="button" className={styles.btnCoupon}>
+            <button type="submit" className={styles.btnCoupon} disabled>
               Apply Coupon
             </button>
-          </div>
+          </form>
           <div className={styles.cartTotal}>
             <h3 className={styles.subheading}>Cart Total</h3>
             <ul className={styles.totalList}>

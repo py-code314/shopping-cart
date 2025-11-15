@@ -185,11 +185,9 @@ ul {
   --clr-green: hsl(120, 100%, 25%);
   --clr-true-blue: #055FCC;
   --clr-royal-blue: #424EDE;
-
   --clr-light-sky-blue: #95CDFD;
   --clr-arsenic: #374244;
-  /* --clr-fulvous: #E58411; */
-  --clr-saddle-brown: #883E0C;
+  --clr-saddle-brown: rgb(136, 62, 12);
   --clr-lotion: #FAFAFA;
   --clr-davys-grey: #595959;
   --clr-cultured: #F7F7F7;

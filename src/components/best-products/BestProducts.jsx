@@ -131,7 +131,7 @@ const BestProducts = () => {
             </li>
           ))}
       </ul>
-      <Link className={styles.linkMore} to={'/shop'}>
+      <Link className={styles.linkAll} to={'/shop'}>
         View All
         <img src={rightArrow} alt="" width={30} height={20} />
       </Link>

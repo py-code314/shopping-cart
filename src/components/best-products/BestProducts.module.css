@@ -102,14 +102,20 @@
   justify-content: center;
   align-items: center;
   padding: 6px;
+  transition: transform 0.4s ease-out;
 }
 
+.btnAdd:hover,
 .btnAdd:focus-visible {
   outline: 2px solid var(--clr-black);
   outline-offset: 2px;
 }
 
-.linkMore {
+.btnAdd:active {
+  transform: scale(0.3);
+}
+
+.linkAll {
   /* composes: linkMore from '../choose-us/ChooseUs.module.css'; */
   display: inline-flex;
   gap: var(--space-60);
@@ -120,6 +126,12 @@
   justify-content: center;
   padding: var(--space-400);
   font-family: var(--ff-gilroy-medium);
+}
+
+.linkAll:hover,
+.linkAll:focus-visible {
+  outline: 2px solid var(--clr-true-blue);
+  border-radius: var(--radius-4)
 }
 
 .loaderWrapper,

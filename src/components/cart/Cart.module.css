@@ -75,6 +75,7 @@
   text-align: center;
 }
 
+.linkShop:hover,
 .linkShop:focus-visible {
   outline: 2px solid var(--clr-dark-gunmetal);
   outline-offset: 2px;
@@ -85,15 +86,20 @@
   composes: btnLayout;
   border: transparent;
   cursor: pointer;
-  /* background-color: transparent; */
   color: var(--clr-white);
   background-color: var(--clr-black);
+  transition: transform 0.2s ease-out;
 }
 
+.btnClear:hover,
 .btnClear:focus-visible {
   outline: 2px solid var(--clr-dark-gunmetal);
   outline-offset: 2px;
   border-radius: var(--radius-1);
+}
+
+.btnClear:active {
+  transform: scale(0.8);
 }
 
 .visuallyHidden {

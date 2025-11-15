@@ -3,7 +3,7 @@
   font-family: var(--ff-inter);
   display: grid;
   grid-template-rows: 260px 1fr max-content;
- box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   padding-block-end: var(--space-100);
   border-radius: var(--radius-2);
 }
@@ -43,14 +43,14 @@
 
 .dollar {
   /* composes: dollar from '../best-products/BestProducts.module.css'; */
-   vertical-align: super;
+  vertical-align: super;
   font-size: var(--fs-200);
 }
 
 .buyWrapper {
   padding: 0 var(--space-100);
   display: grid;
-  gap: var(--space-60);
+  gap: var(--space-100);
 }
 
 .inputWrapper {
@@ -59,8 +59,8 @@
 }
 
 .btnRemove {
-  flex: 0 0 var(--space-1200);
   /* composes: btn from '../hero/Hero.module.css'; */
+  flex: 0 0 var(--space-1200);
   border: transparent;
   cursor: pointer;
   border-radius: var(--radius-1) 0 0 var(--radius-1);
@@ -72,8 +72,8 @@
 }
 
 .btnAdd {
-  flex: 0 0 var(--space-1200);
   /* composes: btn from '../hero/Hero.module.css'; */
+  flex: 0 0 var(--space-1200);
   border: transparent;
   cursor: pointer;
   border-radius: 0 var(--radius-1) var(--radius-1) 0;
@@ -108,7 +108,7 @@
 
 .visuallyHidden {
   /* composes: visuallyHidden from '../hero/Hero.module.css'; */
-   position: absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -134,10 +134,20 @@
   color: var(--clr-white);
   padding: var(--space-100) 0;
   font-weight: var(--fw-semibold);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-out;
+}
+
+.btnSubmit:hover {
+  box-shadow: 5px 5px 0px 0px #a1d8ff, 10px 10px 0px 0px #cae6ff;
 }
 
 .btnSubmit:focus-visible {
   outline: 2px solid var(--clr-dark-gunmetal);
   outline-offset: 2px;
   border-radius: var(--radius-1);
+}
+
+.btnSubmit:active {
+  transform: translate(5%, 20%);
+  box-shadow: none;
 }

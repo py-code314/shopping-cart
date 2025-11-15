@@ -42,7 +42,7 @@ exports[`Cart component > renders Cart with one item 1`] = `
     <div
       class="_cartSummary_65070e"
     >
-      <div
+      <form
         class="_inputWrapper_65070e"
       >
         <label
@@ -59,11 +59,12 @@ exports[`Cart component > renders Cart with one item 1`] = `
         />
         <button
           class="_btnCoupon_65070e"
-          type="button"
+          disabled=""
+          type="submit"
         >
           Apply Coupon
         </button>
-      </div>
+      </form>
       <div
         class="_cartTotal_65070e"
       >
@@ -199,7 +200,7 @@ exports[`Cart component > renders empty Cart with text your bag is currently emp
     <div
       class="_cartSummary_65070e"
     >
-      <div
+      <form
         class="_inputWrapper_65070e"
       >
         <label
@@ -216,11 +217,12 @@ exports[`Cart component > renders empty Cart with text your bag is currently emp
         />
         <button
           class="_btnCoupon_65070e"
-          type="button"
+          disabled=""
+          type="submit"
         >
           Apply Coupon
         </button>
-      </div>
+      </form>
       <div
         class="_cartTotal_65070e"
       >
