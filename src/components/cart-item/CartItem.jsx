@@ -39,6 +39,13 @@ const CartItem = ({ items }) => {
     })
   }
 
+  const handleDelete = (id) => {
+    setCartItems((prevCartItems) => {
+      const updatedCart = prevCartItems.filter((item) => item.id !== id)
+      return updatedCart
+    })
+  }
+
   const handleInputChange = (e, id) => {
     const newQuantity = Number(e.target.value)
 
@@ -88,7 +95,9 @@ const CartItem = ({ items }) => {
         {items.map((item) => (
           <tr className={`${styles.tableRow} ${styles.cartItem}`} key={item.id}>
             <td className={`${styles.tableCell} ${styles.product}`}>
-              <button className={styles.deleteBtn}>
+              <button
+                className={styles.deleteBtn}
+                onClick={() => handleDelete(item.id)}>
                 <img
                   className={styles.deleteIcon}
                   src={deleteIcon}
