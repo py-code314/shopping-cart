@@ -46,7 +46,10 @@ exports[`CartItem component > renders CartItem 1`] = `
           class="_tableCell_ec1528 _product_ec1528"
         >
           <button
+            aria-label="Remove item from cart"
             class="_deleteBtn_ec1528"
+            title="Delete"
+            type="button"
           >
             <img
               alt=""

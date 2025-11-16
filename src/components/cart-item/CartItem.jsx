@@ -97,6 +97,9 @@ const CartItem = ({ items }) => {
             <td className={`${styles.tableCell} ${styles.product}`}>
               <button
                 className={styles.deleteBtn}
+                type="button"
+                aria-label="Remove item from cart"
+                title="Delete"
                 onClick={() => handleDelete(item.id)}>
                 <img
                   className={styles.deleteIcon}

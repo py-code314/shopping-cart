@@ -90,4 +90,22 @@ describe('CartItem component', () => {
 
     expect(mockSetCartItems).toHaveBeenCalledTimes(2)
   })
+
+  it('should remove item from cart with Delete button click', async () => {
+    const user = userEvent.setup()
+    mockSetCartItems.mockClear()
+    render(
+      <MemoryRouter>
+        <CartItem items={mockItems} />
+      </MemoryRouter>
+    )
+
+    const deleteButton = screen.getByRole('button', {
+      name: /remove item/i,
+    })
+
+    await user.click(deleteButton)
+
+    expect(mockSetCartItems).toHaveBeenCalledTimes(1)
+  })
 })
