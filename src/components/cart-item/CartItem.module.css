@@ -4,22 +4,13 @@
   gap: var(--space-600);
 }
 
-.tableHeading {
-  font-family: var(--ff-gilroy-medium);
-}
-
-@media (max-width: 62rem /* 992px */) {
-  .tableHead {
-    display: none;
-  }
-}
-
 .tableBody {
   display: flex;
   flex-direction: column;
   gap: var(--space-600);
 }
 
+/* Display cart items in grid layout for small screens */
 @media (max-width: 62rem /* 992px */) {
   .tableBody {
     display: grid;
@@ -32,7 +23,6 @@
   display: flex;
   align-items: center;
   padding: var(--space-600) var(--space-1200) var(--space-600) var(--space-800);
-
   font-family: var(--ff-gilroy-medium);
   gap: var(--space-600);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -42,56 +32,12 @@
 
 @media (max-width: 62rem /* 992px */) {
   .tableRow {
-    align-items: start;
-    padding-inline-start: var(--space-800);
     display: grid;
     grid-template-rows: 1fr;
     gap: var(--space-200);
+    justify-items: start;
+    align-items: start;
   }
-}
-
-.product {
-  flex: 5;
-}
-
-.emptyDiv {
-  width: 44px;
-}
-
-.price,
-.subTotal,
-.noOfItems {
-  flex: 1;
-}
-
-.deleteBtn {
-  border: 1px solid var(--clr-dark-gunmetal);
-  padding: 6px;
-  border-radius: var(--radius-4);
-  cursor: pointer;
-  background-color: transparent;
-  flex: 0 0 var(--space-1200);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imageTitleWrapper {
-  display: flex;
-  align-items: center;
-  gap: var(--space-800);
-}
-
-@media (max-width: 62rem /* 992px */) {
-  .imageTitleWrapper {
-    display: grid;
-    grid-template-rows: 120px max-content;
-  }
-}
-
-.tableHeading,
-.tableCell {
-  display: flex;
 }
 
 .product {
@@ -103,14 +49,43 @@
 
 @media (max-width: 62rem /* 992px */) {
   .product {
+    width: 100%;
     display: grid;
+    justify-items: center;
   }
+}
+
+.deleteBtn {
+  border: 1px solid var(--clr-dark-gunmetal);
+  padding: var(--space-60);
+  border-radius: var(--radius-4);
+  cursor: pointer;
+  background-color: transparent;
+  flex: 0 0 var(--space-1200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 62rem /* 992px */) {
   .deleteBtn {
     justify-self: start;
   }
 }
 
+.imageTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-800);
+}
+
 @media (max-width: 62rem /* 992px */) {
+  .imageTitleWrapper {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 150px max-content;
+  }
+
   .image {
     object-fit: contain;
     height: 100%;
@@ -118,16 +93,10 @@
   }
 }
 
+.price,
+.noOfItems,
 .subTotal {
-  color: var(--clr-saddle-brown);
-  display: flex;
-  justify-content: end;
-}
-
-@media (max-width: 62rem /* 992px */) {
-  .subTotal {
-    display: block;
-  }
+  flex: 1;
 }
 
 .inputWrapper {
@@ -135,20 +104,34 @@
   border: 1px solid var(--clr-black);
 }
 
+@media (max-width: 62rem /* 992px */) {
+  .inputWrapper {
+    justify-content: start;
+  }
+}
+
 .btnQuantity {
-  /* composes: btn from '../hero/Hero.module.css'; */
   flex: 0 0 var(--space-1200);
   border: transparent;
   cursor: pointer;
   background-color: transparent;
-  padding: 6px;
+  padding: var(--space-60);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Hide label for quantity input field */
 .visuallyHidden {
-  composes: visuallyHidden from '../hero/Hero.module.css';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .quantity {
@@ -159,7 +142,14 @@
   text-align: center;
 }
 
+/* Remove number input arrows */
 .quantity::-webkit-outer-spin-button,
 .quantity::-webkit-inner-spin-button {
   appearance: none;
 }
+
+.subTotal {
+  color: var(--clr-saddle-brown);
+  text-align: right;
+}
+

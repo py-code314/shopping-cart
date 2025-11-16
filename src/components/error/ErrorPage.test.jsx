@@ -1,16 +1,17 @@
-import {render, screen} from '@testing-library/react'
-import ErrorPage from './ErrorPage'
+import { render } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
+import ErrorPage from './ErrorPage'
 
+/* Test suite */
 describe('ErrorPage component', () => {
-  it('render ErrorPage', () => {
+  it('renders ErrorPage', () => {
     const { getByRole } = render(
       <MemoryRouter>
-        <ErrorPage/>
+        <ErrorPage />
       </MemoryRouter>
     )
     const heading = getByRole('heading', { name: /sorry/i, level: 1 })
-    
+
     expect(heading).toBeInTheDocument()
   })
 
@@ -21,7 +22,7 @@ describe('ErrorPage component', () => {
       </MemoryRouter>
     )
     const homeLink = getByRole('link', { name: /home/i })
-    
+
     expect(homeLink).toHaveAttribute('href', '/home')
   })
 })

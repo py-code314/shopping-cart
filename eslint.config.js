@@ -15,6 +15,7 @@ export default defineConfig([
     ],
     languageOptions: {
       ecmaVersion: 2020,
+      // Add Vitest globals
       globals: {
         ...globals.browser,
         ...globals.vitest,

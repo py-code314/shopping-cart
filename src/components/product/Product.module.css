@@ -15,7 +15,6 @@
 }
 
 .image {
-  /* composes: image from '../best-products/BestProducts.module.css'; */
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -27,7 +26,6 @@
 }
 
 .category {
-  /* composes: category from '../best-products/BestProducts.module.css'; */
   color: var(--clr-davys-grey);
   text-transform: capitalize;
 }
@@ -42,7 +40,6 @@
 }
 
 .dollar {
-  /* composes: dollar from '../best-products/BestProducts.module.css'; */
   vertical-align: super;
   font-size: var(--fs-200);
 }
@@ -59,26 +56,24 @@
 }
 
 .btnRemove {
-  /* composes: btn from '../hero/Hero.module.css'; */
   flex: 0 0 var(--space-1200);
   border: transparent;
   cursor: pointer;
   border-radius: var(--radius-1) 0 0 var(--radius-1);
   background-color: var(--clr-dark-gunmetal);
-  padding: 6px;
+  padding: var(--space-60);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btnAdd {
-  /* composes: btn from '../hero/Hero.module.css'; */
   flex: 0 0 var(--space-1200);
   border: transparent;
   cursor: pointer;
   border-radius: 0 var(--radius-1) var(--radius-1) 0;
   background-color: var(--clr-dark-gunmetal);
-  padding: 6px;
+  padding: var(--space-60);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +83,18 @@
 .btnAdd:focus-visible {
   outline: 2px solid var(--clr-dark-gunmetal);
   outline-offset: 2px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .quantity {
@@ -106,19 +113,6 @@
   border: transparent;
 }
 
-.visuallyHidden {
-  /* composes: visuallyHidden from '../hero/Hero.module.css'; */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
 .quantity::-webkit-outer-spin-button,
 .quantity::-webkit-inner-spin-button {
   appearance: none;
@@ -126,7 +120,6 @@
 }
 
 .btnSubmit {
-  /* composes: btn from '../hero/Hero.module.css'; */
   border: transparent;
   cursor: pointer;
   border-radius: var(--radius-1);

@@ -1,11 +1,12 @@
-import App from "../App"
-import ErrorPage from "../components/error/ErrorPage"
-import HomeLayout from "../components/home-layout/HomeLayout"
-import Home from "../components/home/Home"
-import DefaultLayout from "../components/default-layout/DefaultLayout"
-import Shop from "../components/shop/Shop"
-import Cart from "../components/cart/Cart"
+import App from '../App'
+import ErrorPage from '../components/error/ErrorPage'
+import HomeLayout from '../components/home-layout/HomeLayout'
+import Home from '../components/home/Home'
+import DefaultLayout from '../components/default-layout/DefaultLayout'
+import Shop from '../components/shop/Shop'
+import Cart from '../components/cart/Cart'
 
+/* Array of routes */
 const routes = [
   {
     path: '/',

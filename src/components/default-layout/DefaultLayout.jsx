@@ -1,9 +1,11 @@
+import styles from './DefaultLayout.module.css'
 import Header from '../header/Header'
 import { Outlet, useOutletContext } from 'react-router-dom'
-import styles from './DefaultLayout.module.css'
 
+/* Display Header with background color */
 const DefaultLayout = () => {
   const [cartItems, setCartItems] = useOutletContext()
+  
   return (
     <>
       <div className={styles.backgroundColor}>

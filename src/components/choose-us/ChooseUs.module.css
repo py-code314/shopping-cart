@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
 }
+
 @media (max-width: 62rem /* 992px */) {
   .headingWrapper {
     justify-content: center;
@@ -29,6 +30,7 @@
   font-size: var(--fs-800);
 }
 
+/* Use flex instead of grid to center last item on narrow screens */
 .cards {
   flex: 3;
   display: flex;

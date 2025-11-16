@@ -4,16 +4,17 @@ import plusIcon from '../../assets/images/plus-icon.svg'
 import { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 
+/* Displays a single product */
 const Product = ({ product }) => {
   // eslint-disable-next-line no-unused-vars
   const [cartItems, setCartItems] = useOutletContext()
-   
+  const [quantity, setQuantity] = useState(0)
 
+  // Destructure product data
   const { id, image, category, title, rating, price } = product
   const { rate, count } = rating
 
-  const [quantity, setQuantity] = useState(0)
-
+  // Event handlers
   const handleNumberChange = (e) => {
     setQuantity(e.target.value)
   }
@@ -28,13 +29,14 @@ const Product = ({ product }) => {
   }
 
   const handleSubmit = (e, id, image, title, price, quantity) => {
-    // console.log('submit clicked')
     e.preventDefault()
 
-    setCartItems(prevCartItems => {
-      const existingItemIndex = prevCartItems.findIndex(item => item.id === id)
-      // console.log(existingItemIndex)
+    setCartItems((prevCartItems) => {
+      const existingItemIndex = prevCartItems.findIndex(
+        (item) => item.id === id
+      )
 
+      // Add product to cart if not already in cart
       if (existingItemIndex > -1) {
         const updatedCartItems = [...prevCartItems]
         updatedCartItems[existingItemIndex] = {
@@ -43,16 +45,27 @@ const Product = ({ product }) => {
         }
         return updatedCartItems
       } else {
-        // console.log('add new item')
-        return [...prevCartItems, { id: id, image: image, title: title, price: price, quantity: quantity}]
+        return [
+          ...prevCartItems,
+          {
+            id: id,
+            image: image,
+            title: title,
+            price: price,
+            quantity: quantity,
+          },
+        ]
       }
     })
   }
   return (
     <div className={styles.card}>
+      {/* Product image */}
       <div className={styles.imageWrapper}>
         <img className={styles.image} src={image} alt="" />
       </div>
+
+      {/* Product details */}
       <div className={styles.contentWrapper}>
         <p className={styles.category}>{category}</p>
         <p className={styles.title}>{title}</p>
@@ -65,9 +78,12 @@ const Product = ({ product }) => {
           {price.toFixed(2)}
         </p>
       </div>
+
+      {/* Add to cart form */}
       <form
         className={styles.buyWrapper}
         onSubmit={(e) => handleSubmit(e, id, image, title, price, quantity)}>
+        {/* Quantity input with buttons */}
         <div className={styles.inputWrapper}>
           <button
             className={styles.btnRemove}
@@ -86,7 +102,7 @@ const Product = ({ product }) => {
           <label className={styles.visuallyHidden} htmlFor={id}>
             Quantity
           </label>
-           {/* Add max value to make input shrinkable  */}
+          {/* Add max value to make input shrinkable  */}
           <input
             className={styles.quantity}
             id={id}
@@ -113,6 +129,8 @@ const Product = ({ product }) => {
             />
           </button>
         </div>
+
+        {/* Add to cart button */}
         <button className={styles.btnSubmit} type="submit">
           Add To Cart
         </button>

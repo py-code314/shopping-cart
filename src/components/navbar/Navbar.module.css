@@ -3,6 +3,10 @@
   gap: clamp(0.5rem, 0.143rem + 1.786vw, 1.75rem);
 }
 
+.navItem {
+  font-family: var(--ff-gilroy-bold);
+}
+
 .navbarLink {
   padding: clamp(0.313rem, 0.223rem + 0.446vw, 0.625rem);
   text-decoration: none;
@@ -22,12 +26,4 @@
   color: var(--clr-white);
   border: 2px solid var(--clr-white);
   border-radius: var(--radius-1);
-}
-
-/* .inactive {
-  pointer-events: none;
-} */
-
-.navItem {
-  font-family: var(--ff-gilroy-bold);
 }

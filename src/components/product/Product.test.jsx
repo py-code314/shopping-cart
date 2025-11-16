@@ -1,16 +1,8 @@
-import { render, screen } from '@testing-library/react'
 import Product from './Product'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-const mockSetCartItems = vi.fn()
-vi.mock('react-router-dom', async () => {
-  const actual = await vi.importActual('react-router-dom')
-  return {
-    ...actual,
-    useOutletContext: vi.fn(() => [[], mockSetCartItems]),
-  }
-})
-
+// Mock a product
 const mockProduct = {
   id: 1,
   image: 'image.jpg',
@@ -20,9 +12,24 @@ const mockProduct = {
   price: 49,
 }
 
+// Mock setCartItems
+const mockSetCartItems = vi.fn()
+
+// Mock useOutletContext
+vi.mock('react-router-dom', async () => {
+  const actual = await vi.importActual('react-router-dom')
+
+  return {
+    ...actual,
+    useOutletContext: vi.fn(() => [[], mockSetCartItems]),
+  }
+})
+
+/* Test Suite */
 describe('Product component', () => {
   it('renders Product', () => {
     const { asFragment } = render(<Product product={mockProduct} />)
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -39,8 +46,8 @@ describe('Product component', () => {
 
   it('renders a submit button', () => {
     const { getByRole } = render(<Product product={mockProduct} />)
-
     const submitButton = getByRole('button', { name: /add to cart/i })
+
     expect(submitButton).toBeInTheDocument()
     expect(submitButton).toHaveAttribute('type', 'submit')
   })
@@ -53,9 +60,8 @@ describe('Product component', () => {
     expect(numberInput).toHaveAttribute('type', 'number')
   })
 
-  it('calls setCartItems function with button click', async () => {
+  it('adds item to cart with submit button click', async () => {
     mockSetCartItems.mockClear()
-
     const user = userEvent.setup()
 
     render(<Product product={mockProduct} />)
@@ -68,7 +74,6 @@ describe('Product component', () => {
     await user.click(increaseButton)
     await user.click(submitButton)
 
-    // expect(button).toBeInTheDocument()
     expect(mockSetCartItems).toHaveBeenCalled()
     expect(mockSetCartItems).toHaveBeenCalledTimes(1)
   })

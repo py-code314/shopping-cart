@@ -1,17 +1,17 @@
-import { render, screen } from '@testing-library/react'
-import NavBar from './Navbar'
-import { MemoryRouter } from 'react-router'
 import styles from './Navbar.module.css'
+import NavBar from './Navbar'
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router'
 
-
+/* Test suite */
 describe('Navbar component', () => {
   it('renders Navbar', () => {
-    
     const { asFragment } = render(
       <MemoryRouter>
         <NavBar />
       </MemoryRouter>
     )
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -21,6 +21,7 @@ describe('Navbar component', () => {
         <NavBar />
       </MemoryRouter>
     )
+
     expect(screen.getByRole('link', { name: /home/i })).toHaveAttribute(
       'href',
       '/home'
@@ -31,12 +32,14 @@ describe('Navbar component', () => {
     )
   })
 
-  it('checks for active class when NavLink href matches the current URL', () => {
-    render(<MemoryRouter initialEntries={['/home']}>
-      <NavBar/>
-    </MemoryRouter>)
+  it('checks for active class when NavLink is active', () => {
+    render(
+      <MemoryRouter initialEntries={['/home']}>
+        <NavBar />
+      </MemoryRouter>
+    )
 
-    const homeLink = screen.getByRole('link', {name: /home/i})
+    const homeLink = screen.getByRole('link', { name: /home/i })
 
     expect(homeLink).toHaveClass(styles.active)
   })

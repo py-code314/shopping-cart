@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import CartItem from './CartItem'
-import userEvent from '@testing-library/user-event'
 
+// Mock items prop
 const mockItems = [
   {
     id: 1,
@@ -12,6 +13,8 @@ const mockItems = [
     quantity: 1,
   },
 ]
+
+// Mock cartItems
 const mockCartItems = [
   {
     id: 1,
@@ -22,7 +25,10 @@ const mockCartItems = [
   },
 ]
 
+// Mock setCartItems
 const mockSetCartItems = vi.fn()
+
+// Mock useOutletContext
 vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
   return {
@@ -31,6 +37,7 @@ vi.mock('react-router-dom', async () => {
   }
 })
 
+/* Test suite */
 describe('CartItem component', () => {
   it('renders CartItem', () => {
     const { asFragment } = render(
@@ -65,9 +72,10 @@ describe('CartItem component', () => {
     expect(numberInput).toBeInTheDocument()
   })
 
-  it('should call setCartItems when clicked on minus or plus buttons', async () => {
+  it('should update quantity when clicked on minus or plus buttons', async () => {
     const user = userEvent.setup()
     mockSetCartItems.mockClear()
+
     render(
       <MemoryRouter>
         <CartItem items={mockItems} />
@@ -94,6 +102,7 @@ describe('CartItem component', () => {
   it('should remove item from cart with Delete button click', async () => {
     const user = userEvent.setup()
     mockSetCartItems.mockClear()
+
     render(
       <MemoryRouter>
         <CartItem items={mockItems} />

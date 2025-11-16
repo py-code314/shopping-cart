@@ -3,14 +3,15 @@ import facebookIcon from '../../assets/images/facebook.svg'
 import instagramIcon from '../../assets/images/instagram.svg'
 import mastodonIcon from '../../assets/images/mastodon.svg'
 import pinterestIcon from '../../assets/images/pinterest.svg'
-// import { Link } from 'react-router'
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.contentWrapper}>
+        {/* Primary footer */}
         <div className={styles.footerPrimary}>
           <div className={`${styles.about} ${styles.card}`}>
+            {/* Subtitle */}
             <h2 className={styles.subtitle}>Anchor</h2>
             <p className={styles.description}>
               The full-scale department store experience, now just a click away.
@@ -18,35 +19,34 @@ const Footer = () => {
             </p>
           </div>
 
+          {/* Cards */}
           <div className={styles.card}>
+            {/* Subheading */}
             <h3 className={styles.subheading}>Customer Service</h3>
+
+            {/* Footer list */}
             <ul className={styles.footerListPrimary}>
               {/* Using 'span' instead of 'Link' as it's giving an alert on Accessibility check */}
               <li>
-                <span className={styles.footerLink}>
-                  FAQ and Help
-                </span>
+                <span className={styles.footerLink}>FAQ and Help</span>
               </li>
               <li>
-                <span className={styles.footerLink}>
-                  Order Lookup
-                </span>
+                <span className={styles.footerLink}>Order Lookup</span>
               </li>
               <li>
-                <span className={styles.footerLink}>
-                  Returns
-                </span>
+                <span className={styles.footerLink}>Returns</span>
               </li>
               <li>
-                <span className={styles.footerLink}>
-                  Shipping & Delivery
-                </span>
+                <span className={styles.footerLink}>Shipping & Delivery</span>
               </li>
             </ul>
           </div>
 
           <div className={styles.card}>
+            {/* Subheading */}
             <h3 className={styles.subheading}>Stores & Services</h3>
+
+            {/* Footer list */}
             <ul className={styles.footerListPrimary}>
               <li className={styles.footerListItem}>
                 <span className={styles.footerLink}>
@@ -54,25 +54,22 @@ const Footer = () => {
                 </span>
               </li>
               <li className={styles.footerListItem}>
-                <span className={styles.footerLink}>
-                  Locations & Hours
-                </span>
+                <span className={styles.footerLink}>Locations & Hours</span>
               </li>
               <li className={styles.footerListItem}>
-                <span className={styles.footerLink}>
-                  Store Events
-                </span>
+                <span className={styles.footerLink}>Store Events</span>
               </li>
               <li className={styles.footerListItem}>
-                <span className={styles.footerLink}>
-                  Gift Registry
-                </span>
+                <span className={styles.footerLink}>Gift Registry</span>
               </li>
             </ul>
           </div>
 
           <div className={styles.card}>
+            {/* Subheading */}
             <h3 className={styles.subheading}>Follow Us</h3>
+
+            {/* Footer list */}
             <ul className={styles.footerListPrimary}>
               <li className={styles.footerListItem}>
                 <a
@@ -117,18 +114,18 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
+        {/* Secondary footer */}
         <div className={styles.footerSecondary}>
           <p className={styles.copyright}>Copyright &copy; 2025</p>
+
+          {/* Footer list */}
           <ul className={styles.footerListSecondary}>
             <li className={styles.footerListItem}>
-              <span className={styles.footerLink}>
-                Terms & Conditions
-              </span>
+              <span className={styles.footerLink}>Terms & Conditions</span>
             </li>
             <li className={styles.footerListItem}>
-              <span className={styles.footerLink}>
-                Privacy Policy
-              </span>
+              <span className={styles.footerLink}>Privacy Policy</span>
             </li>
           </ul>
         </div>

@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react'
-import Product from '../product/Product'
 import Shop from './Shop'
 import { useData } from '../../hooks/useData'
+import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 
+// Mock products data
 const mockProducts = [
   {
     id: 1,
@@ -31,6 +31,7 @@ const mockProducts = [
   },
 ]
 
+// Mock useData
 vi.mock('../../hooks/useData', () => ({
   useData: vi.fn(() => ({
     data: mockProducts,
@@ -39,10 +40,12 @@ vi.mock('../../hooks/useData', () => ({
   })),
 }))
 
+// Mock Product module
 vi.mock('../product/Product', () => ({
   default: () => <div data-testid="mock-product">Mock Product</div>,
 }))
 
+/* Test Suite */
 describe('Shop component', () => {
   it('renders Shop component', () => {
     const { asFragment } = render(<Shop />)
@@ -52,6 +55,7 @@ describe('Shop component', () => {
 
   it('renders correct heading', () => {
     render(<Shop />)
+
     expect(
       screen.getByRole('heading', { name: /explore our products/i, level: 2 })
     ).toBeInTheDocument()
@@ -59,7 +63,24 @@ describe('Shop component', () => {
 
   it('renders a list', () => {
     render(<Shop />)
+
     expect(screen.getByRole('list')).toBeInTheDocument()
+  })
+
+  it('should display loading animation while fetching the data', () => {
+    vi.mocked(useData).mockReturnValueOnce({
+      data: null,
+      isLoading: true,
+      error: null,
+    })
+
+    render(
+      <MemoryRouter>
+        <Shop />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
   })
 
   it('should display error message if it fails to fetch the data', () => {
@@ -81,21 +102,5 @@ describe('Shop component', () => {
       'href',
       '/shop'
     )
-  })
-
-  it('should display loading animation while fetching the data', () => {
-    vi.mocked(useData).mockReturnValueOnce({
-      data: null,
-      isLoading: true,
-      error: null,
-    })
-
-    render(
-      <MemoryRouter>
-        <Shop />
-      </MemoryRouter>
-    )
-
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
   })
 })

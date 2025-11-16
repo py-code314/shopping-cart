@@ -5,37 +5,6 @@ exports[`CartItem component > renders CartItem 1`] = `
   <table
     class="_table_ec1528"
   >
-    <thead
-      class="_tableHead_ec1528"
-    >
-      <tr
-        class="_tableRow_ec1528"
-      >
-        <th
-          class="_tableHeading_ec1528 _product_ec1528"
-        >
-          <div
-            class="_emptyDiv_ec1528"
-          />
-          Product
-        </th>
-        <th
-          class="_tableHeading_ec1528 _price_ec1528"
-        >
-          Price
-        </th>
-        <th
-          class="_tableHeading_ec1528 _noOfItems_ec1528"
-        >
-          Quantity
-        </th>
-        <th
-          class="_tableHeading_ec1528 _subTotal_ec1528"
-        >
-          Subtotal
-        </th>
-      </tr>
-    </thead>
     <tbody
       class="_tableBody_ec1528"
     >
@@ -55,7 +24,7 @@ exports[`CartItem component > renders CartItem 1`] = `
               alt=""
               class="_deleteIcon_ec1528"
               height="32"
-              src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z'/%3e%3c/svg%3e"
+              src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23595959'%20d='M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z'/%3e%3c/svg%3e"
               width="32"
             />
           </button>
@@ -66,7 +35,7 @@ exports[`CartItem component > renders CartItem 1`] = `
               alt=""
               class="_image_ec1528"
               src="jacket.jpg"
-              width="50"
+              width="70"
             />
             <p
               class="_title_ec1528"

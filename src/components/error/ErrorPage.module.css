@@ -4,8 +4,9 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100svh;
-  width:100%;
+  width: 100%;
   font-family: var(--ff-dm-sans);
+  /* Center error message */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +20,7 @@
   font-weight: var(--fw-semibold);
   font-size: var(--fs-600);
   line-height: 2.2;
+  /* Move error message to the right */
   transform: translate(10rem, -10rem);
 }
 
@@ -26,7 +28,6 @@
   .contentWrapper {
     transform: translateY(-10rem);
   }
-  
 }
 
 .linkHome {

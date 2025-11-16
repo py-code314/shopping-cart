@@ -1,9 +1,11 @@
 /* ===================
    JOSH COMEAU'S RESET 
    =================== */
-   
+
 /* Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -15,29 +17,43 @@
 
 /* Typographic tweaks */
 body {
-	min-height: 100svh;
+  min-height: 100svh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 /* Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* Remove built-in form typography styles */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 /* Create a root stacking context */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -52,39 +68,46 @@ ul {
 
 @font-face {
   font-family: 'Gilroy Bold';
-  src: url(./assets/fonts/gilroy/Gilroy-Bold.ttf);
+  src: url('./assets/fonts/gilroy/gilroy-bold-webfont.woff2') format('woff2'),
+  url('./assets/fonts/gilroy/gilroy-bold-webfont.woff') format('woff') ;
 }
 
 @font-face {
   font-family: 'Gilroy Medium';
-  src: url(./assets/fonts/gilroy/Gilroy-Medium.ttf);
+  src: url('./assets/fonts/gilroy/gilroy-medium-webfont.woff2') format('woff2'),
+  url('./assets/fonts/gilroy/gilroy-medium-webfont.woff') format('woff') ;
 }
 
 @font-face {
   font-family: 'Gilroy Regular';
-  src: url(./assets/fonts/gilroy/Gilroy-Regular.ttf);
+  src: url('./assets/fonts/gilroy/gilroy-regular-webfont.woff2') format('woff2'),
+  url('./assets/fonts/gilroy/gilroy-regular-webfont.woff') format('woff') ;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url(./assets/fonts/inter/Inter-VariableFont_opsz\,wght.ttf);
-}
-@font-face {
-  font-family: 'DM Sans';
-  src: url(./assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
-}
-@font-face {
-  font-family: 'Eagle Horizon';
-  src: url(./assets/fonts/eagle-horizon/EagleHorizonP.ttf);
+  src: url('./assets/fonts/inter/inter-v-webfont.woff2') format('woff2'),
+  url('./assets/fonts/inter/inter-v-webfont.woff') format('woff') ;
 }
 
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/dm-sans/dmsans-variablefont_opszwght-webfont.woff2') format('woff2'),
+  url('./assets/fonts/dm-sans/dmsans-variablefont_opszwght-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Eagle Horizon';
+  src: url('./assets/fonts/eagle-horizon/eaglehorizonp-webfont.woff2') format('woff2'),
+  url('./assets/fonts/eagle-horizon/eaglehorizonp-webfont.woff') format('woff');
+}
 
 /* ===================
    CSS VARIABLES
    =================== */
 
 :root {
-	/* Font Size */
+  /* Font Size */
   --fs-80: 0.5rem; /* 8px */
   --fs-200: 0.75rem; /* 12px */
   --fs-250: 0.8125rem; /* 13px */
@@ -149,14 +172,13 @@ ul {
   --width-hero-content: 47.5rem; /* 760px */
   --width-search-input: 15.625rem; /* 250px */
   --width-search-input: clamp(16.875rem, 16.339rem + 2.679vw, 18.75rem);
-  --height-product: 26.25rem;  /* 420px ; */
+  --height-product: 26.25rem; /* 420px ; */
   --width-content: 75rem; /* 1200px */
   --width-footer: 62.5rem; /* 1000px */
   --width-error-message: 21.875rem; /* 350px */
   --min-width-card: 13.75rem; /* 220px */
   --max-width-card: 18.75rem; /* 300px */
-  
-  
+
   /* Font weights */
   --fw-thin: 100;
   --fw-extra-light: 200;
@@ -177,35 +199,27 @@ ul {
   --ff-dm-sans: 'DM Sans';
   --ff-eagle-horizon: 'Eagle Horizon';
 
-  
   /* Colors */
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: hsl(0, 0%, 100%);
-  --clr-red: #ff0000;
-  --clr-green: hsl(120, 100%, 25%);
-  --clr-true-blue: #055FCC;
-  --clr-royal-blue: #424EDE;
-  --clr-light-sky-blue: #95CDFD;
-  --clr-ateneo-blue: #013E67;
+  --clr-lotion: #fafafa;
+  --clr-cultured: #f7f7f7;
+  --clr-true-blue: #055fcc;
+  --clr-royal-blue: #424ede;
+  --clr-light-sky-blue: #95cdfd;
+  --clr-ateneo-blue: #013e67;
   --clr-arsenic: #374244;
-  --clr-saddle-brown: rgb(136, 62, 12);
-  --clr-lotion: #FAFAFA;
   --clr-davys-grey: #595959;
-  --clr-cultured: #F7F7F7;
-  --clr-eerie-black: #1E1E1E;
-  --clr-dark-gunmetal: #1E2833;
-  --clr-ateneo-blue: #013E67;
-  
-  
+  --clr-dark-gunmetal: #1e2833;
+  --clr-eerie-black: #1e1e1e;
+  --clr-saddle-brown: #883e0c;
+
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */
   --radius-2: 0.625rem; /* 10px */
   --radius-3: 2.625rem; /* 42px */
   --radius-4: 0.1875rem; /* 3px */
   --radius-circle: 50%;
-  --shadow-1: 0px 5px 10px 0px hsla(0, 0%, 0%, 0.36);
-  --shadow-2: 5px 5px 10px hsla(0, 0%, 0%, 0.5);
-  --shadow-3: 0px 3px 5px 0px hsla(0, 0%, 0%, 0.25);
 }
 
 #root {
@@ -215,7 +229,5 @@ ul {
 .page {
   display: flex;
   flex-direction: column;
-  
   min-height: 100svh;
 }
-

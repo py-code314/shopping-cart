@@ -1,11 +1,10 @@
 import ChooseUs from '../choose-us/ChooseUs'
 import BestProducts from '../best-products/BestProducts'
-// import Hero from '../hero/Hero'
-import styles from './Home.module.css'
 
+/* Displays both ChooseUs and BestProducts components */
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div>
       <ChooseUs />
       <BestProducts />
     </div>

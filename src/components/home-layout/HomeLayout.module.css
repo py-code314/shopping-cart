@@ -1,10 +1,8 @@
 .backgroundWrapper {
   background: var(--clr-arsenic) url('../../assets/images/living-room.jpeg');
-  /* background-size: 100% 100%; */
   background-position: center;
   background-repeat: no-repeat;
-  height: var(--height-hero);
-
-  width: 100%;
   background-size: cover;
+  height: var(--height-hero);
+  width: 100%;
 }

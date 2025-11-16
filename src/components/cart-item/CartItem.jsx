@@ -3,48 +3,10 @@ import minusIcon from '../../assets/images/minus-icon-black.svg'
 import plusIcon from '../../assets/images/plus-icon-black.svg'
 import deleteIcon from '../../assets/images/delete-icon.svg'
 import { useOutletContext } from 'react-router-dom'
-// import { useState } from 'react'
 
 const CartItem = ({ items }) => {
   // eslint-disable-next-line no-unused-vars
   const [cartItems, setCartItems] = useOutletContext()
-  // const [quantity, setQuantity] = useState(0)
-  // console.log(cartItems)
-
-  const handleIncrement = (id) => {
-    setCartItems((prevCartItems) => {
-      const updatedCart = prevCartItems.map((item) => {
-        if (item.id === id) {
-          // Convert quantity into number when user empties input (input value will be - '') and uses button to change the number
-          return { ...item, quantity: Number(item.quantity + 1) }
-        } else {
-          return item
-        }
-      })
-      return updatedCart
-    })
-  }
-
-  const handleDecrement = (id) => {
-    setCartItems((prevCartItems) => {
-      const updatedCart = prevCartItems.map((item) => {
-        if (item.id === id) {
-          // No need to convert quantity into number when user empties input and clicks minus button as ('' - 1) value is -1
-          return { ...item, quantity: item.quantity - 1 }
-        } else {
-          return item
-        }
-      })
-      return updatedCart.filter((item) => item.quantity > 0)
-    })
-  }
-
-  const handleDelete = (id) => {
-    setCartItems((prevCartItems) => {
-      const updatedCart = prevCartItems.filter((item) => item.id !== id)
-      return updatedCart
-    })
-  }
 
   const handleInputChange = (e, id) => {
     const newQuantity = Number(e.target.value)
@@ -74,27 +36,49 @@ const CartItem = ({ items }) => {
     })
   }
 
+  const handleDecrement = (id) => {
+    setCartItems((prevCartItems) => {
+      const updatedCart = prevCartItems.map((item) => {
+        if (item.id === id) {
+          // No need to convert quantity into number when user empties input and clicks minus button as ('' - 1) value is -1
+          return { ...item, quantity: item.quantity - 1 }
+        } else {
+          return item
+        }
+      })
+      return updatedCart.filter((item) => item.quantity > 0)
+    })
+  }
+
+  const handleIncrement = (id) => {
+    setCartItems((prevCartItems) => {
+      const updatedCart = prevCartItems.map((item) => {
+        if (item.id === id) {
+          // Convert quantity into number when user empties input (input value will be - '') and uses button to change the number
+          return { ...item, quantity: Number(item.quantity + 1) }
+        } else {
+          return item
+        }
+      })
+      return updatedCart
+    })
+  }
+
+  const handleDelete = (id) => {
+    setCartItems((prevCartItems) => {
+      const updatedCart = prevCartItems.filter((item) => item.id !== id)
+      return updatedCart
+    })
+  }
+
   return (
     <table className={styles.table}>
-      <thead className={styles.tableHead}>
-        <tr className={styles.tableRow}>
-          <th className={`${styles.tableHeading} ${styles.product}`}>
-            <div className={styles.emptyDiv}></div>
-            Product
-          </th>
-          <th className={`${styles.tableHeading} ${styles.price}`}>Price</th>
-          <th className={`${styles.tableHeading} ${styles.noOfItems}`}>
-            Quantity
-          </th>
-          <th className={`${styles.tableHeading} ${styles.subTotal}`}>
-            Subtotal
-          </th>
-        </tr>
-      </thead>
       <tbody className={styles.tableBody}>
         {items.map((item) => (
+          // Table rows
           <tr className={`${styles.tableRow} ${styles.cartItem}`} key={item.id}>
             <td className={`${styles.tableCell} ${styles.product}`}>
+              {/* Delete button */}
               <button
                 className={styles.deleteBtn}
                 type="button"
@@ -109,22 +93,27 @@ const CartItem = ({ items }) => {
                   height={32}
                 />
               </button>
+
+              {/* Product image and title */}
               <div className={styles.imageTitleWrapper}>
                 <img
                   className={styles.image}
                   src={item.image}
                   alt=""
-                  width={50}
+                  width={70}
                 />
                 <p className={styles.title}>{item.title}</p>
               </div>
             </td>
 
+            {/* Price */}
             <td className={`${styles.tableCell} ${styles.price}`}>
               ${item.price.toFixed(2)}
             </td>
+
             <td className={`${styles.tableCell} ${styles.noOfItems}`}>
               <div className={styles.inputWrapper}>
+                {/* Decrease button */}
                 <button
                   className={styles.btnQuantity}
                   type="button"
@@ -142,6 +131,7 @@ const CartItem = ({ items }) => {
                 <label className={styles.visuallyHidden} htmlFor={item.id}>
                   Quantity
                 </label>
+                {/* Quantity input */}
                 <input
                   id={item.id}
                   className={styles.quantity}
@@ -151,6 +141,7 @@ const CartItem = ({ items }) => {
                   value={item.quantity}
                   onChange={(e) => handleInputChange(e, item.id)}
                 />
+                {/* Increase button */}
                 <button
                   className={styles.btnQuantity}
                   type="button"
@@ -167,6 +158,8 @@ const CartItem = ({ items }) => {
                 </button>
               </div>
             </td>
+
+            {/* Subtotal */}
             <td className={`${styles.tableCell} ${styles.subTotal}`}>
               ${(item.price * item.quantity).toFixed(2)}
             </td>

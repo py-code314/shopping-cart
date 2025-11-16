@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react'
-import BestProducts from './BestProducts'
-import { MemoryRouter} from 'react-router-dom'
-import { useData } from '../../hooks/useData'
 import userEvent from '@testing-library/user-event'
+import { MemoryRouter } from 'react-router-dom'
 import * as router from 'react-router-dom'
+import BestProducts from './BestProducts'
+import { useData } from '../../hooks/useData'
 
+// Mock useOutletContext
 const mockSetCartItems = vi.fn()
 vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
@@ -41,6 +42,7 @@ const mockProducts = [
   },
 ]
 
+// Mock useData
 vi.mock('../../hooks/useData', () => ({
   useData: vi.fn(() => ({
     data: mockProducts,
@@ -49,6 +51,7 @@ vi.mock('../../hooks/useData', () => ({
   })),
 }))
 
+/* Test Suite */
 describe('BestProducts component', () => {
   it('renders BestProducts', () => {
     const { asFragment } = render(
@@ -56,6 +59,7 @@ describe('BestProducts component', () => {
         <BestProducts />
       </MemoryRouter>
     )
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -98,11 +102,11 @@ describe('BestProducts component', () => {
     })
   })
 
-  it('should display error div if it fails to fetch the data', () => {
+  it('should display error message if it fails to fetch the data', () => {
     vi.mocked(useData).mockReturnValueOnce({
       data: null,
       isLoading: false,
-      error: 'Error'
+      error: 'Error',
     })
 
     render(
@@ -113,14 +117,17 @@ describe('BestProducts component', () => {
 
     expect(screen.getByText('Something went wrong.')).toBeInTheDocument()
     expect(screen.getByText('Retry')).toBeInTheDocument()
-    expect(screen.getByRole('link', {name: /retry/i})).toHaveAttribute('href', '/home')
+    expect(screen.getByRole('link', { name: /retry/i })).toHaveAttribute(
+      'href',
+      '/home'
+    )
   })
 
   it('should display loading animation while fetching the data', () => {
     vi.mocked(useData).mockReturnValueOnce({
       data: null,
       isLoading: true,
-      error: null
+      error: null,
     })
 
     render(
@@ -130,10 +137,9 @@ describe('BestProducts component', () => {
     )
 
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
-    
   })
 
-  it('calls setCartItems function with button click', async () => {
+  it('adds item to cart on Add button click', async () => {
     router.useOutletContext.mockReturnValueOnce([[], mockSetCartItems])
     mockSetCartItems.mockClear()
 
@@ -146,18 +152,19 @@ describe('BestProducts component', () => {
     )
 
     const buttons = screen.getAllByRole('button', { name: /add to cart/i })
-    
+
     await user.click(buttons[0])
 
     expect(mockSetCartItems).toHaveBeenCalledTimes(1)
   })
 
-  it('redirects View All link to shop path', () => {
+  it('redirects View All link to shop', () => {
     render(
       <MemoryRouter>
         <BestProducts />
       </MemoryRouter>
     )
+
     expect(screen.getByRole('link', { name: /view all/i })).toHaveAttribute(
       'href',
       '/shop'

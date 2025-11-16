@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { MemoryRouter, useOutletContext } from 'react-router-dom'
 import Cart from './Cart'
-import userEvent from '@testing-library/user-event'
 
-
+// Mock useOutletContext
 const mockSetCartItems = vi.fn()
 vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
@@ -13,36 +13,40 @@ vi.mock('react-router-dom', async () => {
   }
 })
 
+// Mock CartItem
 vi.mock('../cart-item/CartItem', () => ({
-  default: () => <div data-testid='mock-cart-item'>Mock Cart Item</div>
+  default: () => <div data-testid="mock-cart-item">Mock Cart Item</div>,
 }))
 
+/* Test Suite */
 describe('Cart component', () => {
-  it('renders empty Cart with text your bag is currently empty', () => {
-    const { asFragment, getByText } = render(<MemoryRouter>
-      <Cart />
-    </MemoryRouter>)
+  it("renders empty Cart with text 'your bag is currently empty'", () => {
+    const { asFragment, getByText } = render(
+      <MemoryRouter>
+        <Cart />
+      </MemoryRouter>
+    )
     const para = getByText('Your bag is currently empty.')
-
-
 
     expect(asFragment()).toMatchSnapshot()
     expect(para).toBeInTheDocument()
   })
-  
+
   it('renders Cart with one item', () => {
-    useOutletContext.mockReturnValueOnce([[
-      {
-        id: 1,
-        image: 'jacket.jpg',
-        category: 'clothing',
-        title: 'Jacket',
-        rating: { rate: 4.2 },
-        price: 49.99,
-      },
-    ],
-      mockSetCartItems])
-    
+    useOutletContext.mockReturnValueOnce([
+      [
+        {
+          id: 1,
+          image: 'jacket.jpg',
+          category: 'clothing',
+          title: 'Jacket',
+          rating: { rate: 4.2 },
+          price: 49.99,
+        },
+      ],
+      mockSetCartItems,
+    ])
+
     const { asFragment } = render(
       <MemoryRouter>
         <Cart />
@@ -59,7 +63,7 @@ describe('Cart component', () => {
       </MemoryRouter>
     )
     const heading = getByRole('heading', { name: /cart/i, level: 2 })
-    
+
     expect(heading).toBeInTheDocument()
   })
 
@@ -70,7 +74,7 @@ describe('Cart component', () => {
       </MemoryRouter>
     )
     const shopLink = getByRole('link', { name: /return to shop/i })
-    
+
     expect(shopLink).toHaveAttribute('href', '/shop')
   })
 
@@ -83,7 +87,7 @@ describe('Cart component', () => {
 
     const clearButton = screen.getByRole('button', { name: /clear cart/i })
     const couponButton = screen.getByRole('button', { name: /apply coupon/i })
-    
+
     expect(clearButton).toBeInTheDocument()
     expect(couponButton).toBeInTheDocument()
   })
@@ -112,7 +116,7 @@ describe('Cart component', () => {
       </MemoryRouter>
     )
     const subheading = getByRole('heading', { name: /cart total/i, level: 3 })
-    
+
     expect(subheading).toBeInTheDocument()
   })
 })
