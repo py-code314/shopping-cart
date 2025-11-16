@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import HomeLayout from './HomeLayout'
 import * as router from 'react-router-dom'
+import styles from './HomeLayout.module.css'
 
 const mockCartItems = [{ id: 1, quantity: 1 }]
 const mockSetCartItems = vi.fn()
@@ -37,6 +38,6 @@ describe('HomeLayout component', () => {
 
     const headerWrapper = screen.getByTestId('mock-header').parentElement
 
-    expect(headerWrapper).toHaveClass('backgroundWrapper')
+    expect(headerWrapper).toHaveClass(styles.backgroundWrapper)
   })
 })

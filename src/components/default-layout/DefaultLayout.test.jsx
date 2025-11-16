@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import DefaultLayout from './DefaultLayout'
 import * as router from 'react-router-dom'
+import styles from './DefaultLayout.module.css'
 
 
 const mockCartItems = [{ id: 1, quantity: 1 }]
@@ -38,6 +39,6 @@ describe('DefaultLayout component', () => {
 
     const headerWrapper = screen.getByTestId('mock-header').parentElement
 
-    expect(headerWrapper).toHaveClass('backgroundColor')
+    expect(headerWrapper).toHaveClass(styles.backgroundColor)
   })
 })

@@ -98,11 +98,11 @@ describe('BestProducts component', () => {
     })
   })
 
-  it('should display error message if it fails to fetch the data', () => {
+  it('should display error div if it fails to fetch the data', () => {
     vi.mocked(useData).mockReturnValueOnce({
       data: null,
       isLoading: false,
-      error: 'Error fetching the data'
+      error: 'Error'
     })
 
     render(
@@ -111,7 +111,26 @@ describe('BestProducts component', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByText('Error fetching the data')).toBeInTheDocument()
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument()
+    expect(screen.getByText('Retry')).toBeInTheDocument()
+    expect(screen.getByRole('link', {name: /retry/i})).toHaveAttribute('href', '/home')
+  })
+
+  it('should display loading animation while fetching the data', () => {
+    vi.mocked(useData).mockReturnValueOnce({
+      data: null,
+      isLoading: true,
+      error: null
+    })
+
+    render(
+      <MemoryRouter>
+        <BestProducts />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
+    
   })
 
   it('calls setCartItems function with button click', async () => {
@@ -133,7 +152,7 @@ describe('BestProducts component', () => {
     expect(mockSetCartItems).toHaveBeenCalledTimes(1)
   })
 
-  it('links to shop path', () => {
+  it('redirects View All link to shop path', () => {
     render(
       <MemoryRouter>
         <BestProducts />

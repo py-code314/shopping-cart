@@ -18,7 +18,7 @@ const BestProducts = () => {
   if (isLoading)
     return (
       <div className={styles.loaderWrapper}>
-        <div className={styles.loader}></div>
+        <div data-testid='loading-spinner' className={styles.loader}></div>
       </div>
     )
   if (error)

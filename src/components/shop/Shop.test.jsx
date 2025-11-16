@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react'
 import Product from '../product/Product'
 import Shop from './Shop'
 import { useData } from '../../hooks/useData'
+import { MemoryRouter } from 'react-router-dom'
 
 const mockProducts = [
   {
@@ -65,11 +66,36 @@ describe('Shop component', () => {
     vi.mocked(useData).mockReturnValueOnce({
       data: null,
       isLoading: false,
-      error: 'Error fetching the data',
+      error: 'Error',
     })
 
-    render(<Shop />)
+    render(
+      <MemoryRouter>
+        <Shop />
+      </MemoryRouter>
+    )
 
-    expect(screen.getByText('Error fetching the data')).toBeInTheDocument()
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument()
+    expect(screen.getByText('Retry')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /retry/i })).toHaveAttribute(
+      'href',
+      '/shop'
+    )
+  })
+
+  it('should display loading animation while fetching the data', () => {
+    vi.mocked(useData).mockReturnValueOnce({
+      data: null,
+      isLoading: true,
+      error: null,
+    })
+
+    render(
+      <MemoryRouter>
+        <Shop />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
   })
 })
