@@ -57,7 +57,7 @@ This is a mock e-commerce site developed using React and CSS. It serves as a sin
 ### Links
 
 - [Solution URL](https://github.com/py-code314/shopping-cart)
-- [Live Site URL]()
+- [Live Site URL](https://chicken-run-shopping-cart.netlify.app/)
 
 
 ## Credits
